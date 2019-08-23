@@ -11,6 +11,9 @@ NMC集合预报工具箱数据后处理程序以及前端界面程序.
 若有问题, 请[留言](https://github.com/nmcdev/nmc_ens_toolkits/issues).
 
 # Update:
+* 2019年8月，发布版本1.2
+  -增加对GRAPES_REPS区域集合预报数据支持，新增逐1小时降水、雷达回波等集合预报产品.
+
 * 2019年2月
   - 支持对GRAPES_GEPS集合预报GRIB数据的后处理及工具箱的前端显示.
 
