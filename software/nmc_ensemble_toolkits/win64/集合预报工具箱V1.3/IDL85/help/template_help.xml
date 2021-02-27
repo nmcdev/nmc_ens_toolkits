@@ -1,0 +1,60 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+   template_help.xml
+
+   Template file for user-written iTool context-sensitive online
+   help topics. See the iTool Developer's Guide for details on
+   creating your own help topics.
+
+   NOTE: Be sure to COPY the itools.xsd file from the <IDL_DIR>/help
+   directory into the same directory as the *help.xml file
+
+-->
+
+<!--
+   xmlns is the namespace for this XML file.
+   xmlns:xsi is the XMLSchema namespace containing the
+      xsi:schemaLocation attribute.
+   xsi:schemaLocation states that the namespace is defined by
+      the given schema document.
+-->
+<Help xmlns="http://www.exelisvis.com"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.exelisvis.com itools.xsd">
+
+<!-- Sample topic:
+
+NOTE: all tags are case sensitive.
+
+<Topic>
+   <Keyword>Keyword1</Keyword>   (All Keywords must appear before Links)
+   <Keyword>Keyword2</Keyword>
+   ...
+   <Link type="TYPEA">LinkA</Link>    (type is a required attribute)
+   <Link type="TYPEB" book="help.file">LinkB</Link>
+                                      (book is an optional attribute) 
+   ...
+</Topic>
+
+Example:
+
+<Topic>
+   <Keyword>myKeyword</Keyword>
+   <Link type="IDLHELP" book="myhelp.adp">TOPIC_NAME</Link>
+   <Link type="MSHTMLHELP">12345</Link>
+   <Link type="PDF" book="mybook.pdf"></Link>
+   <Link type="HTML" book="mytopic.html">anchor</Link>
+   <Link type="TEXT">myTopic.txt</Link>
+</Topic>
+
+See the iTool Developer's Guide for details on creating
+new topics.
+
+-->
+
+
+<!--  Insert new topics below this line.    -->
+
+
+
+</Help>

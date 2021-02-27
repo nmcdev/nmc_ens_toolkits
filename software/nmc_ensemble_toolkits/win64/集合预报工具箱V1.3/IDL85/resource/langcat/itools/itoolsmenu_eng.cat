@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- $Id: //depot/Release/ENVI53_IDL85/idl/idldir/resource/langcat/itools/itoolsmenu_eng.cat#1 $  -->
+<!DOCTYPE IDLffLangCat SYSTEM 'langcat.dtd'>
+
+<IDLffLangCat APPLICATION="itools menu" VERSION="1.0" AUTHOR="Exelis Visual Information Solutions">
+
+  <LANGUAGE NAME='ENG'>
+
+    <!-- Note: See graphics_en.cat for many of the menu items -->
+
+    <KEY NAME='Menu:File:New'>New</KEY>
+    <KEY NAME='Menu:File:Open'>Open...</KEY>
+    <KEY NAME='Menu:File:Import'>Import...</KEY>
+    <KEY NAME='Menu:File:Export'>Export...</KEY>
+    <KEY NAME='Menu:File:PrintPreview'>Print Preview...</KEY>
+    <KEY NAME='Menu:File:Preferences'>Preferences...</KEY>
+    <KEY NAME='Menu:File:Exit'>Exit</KEY>
+
+    <KEY NAME='Menu:Edit:PasteSpecial'>Paste Special</KEY>
+    <KEY NAME='Menu:Edit:SelectAll'>Select All</KEY>
+    <KEY NAME='Menu:Edit:Export'>Export Data to IDL...</KEY>
+    <KEY NAME='Menu:Edit:Grouping'>Grouping</KEY>
+    <KEY NAME='Menu:Edit:Group'>Group</KEY>
+    <KEY NAME='Menu:Edit:Ungroup'>Ungroup</KEY>
+    <KEY NAME='Menu:Edit:ExportImage'>Export Image...</KEY>
+    <KEY NAME='Menu:Edit:Parameters'>Parameters...</KEY>
+
+    <KEY NAME='Menu:Style'>Style</KEY>
+    <KEY NAME='Menu:Style:ApplyStyle'>Apply Style...</KEY>
+    <KEY NAME='Menu:Style:CreateStylefromSelection'>Create Style from Selection...</KEY>
+    <KEY NAME='Menu:Style:StyleEditor'>Style Editor...</KEY>
+
+    <KEY NAME='Menu:Insert:Visualization'>Visualization...</KEY>
+    <KEY NAME='Menu:Insert:View'>View</KEY>
+    <KEY NAME='Menu:Insert:Light'>Light</KEY>
+    <KEY NAME='Menu:Insert:DataSpace'>Data Space</KEY>
+    <KEY NAME='Menu:Insert:Axis'>Axis</KEY>
+    <KEY NAME='Menu:Insert:XAxis'>X Axis</KEY>
+    <KEY NAME='Menu:Insert:YAxis'>Y Axis</KEY>
+    <KEY NAME='Menu:Insert:ZAxis'>Z Axis</KEY>
+    <KEY NAME='Menu:Insert:LegendItem'>Legend Item</KEY>
+    <KEY NAME='Menu:Insert:Map'>Map</KEY>
+    <KEY NAME='Menu:Insert:Map:Grid'>Grid</KEY>
+    <KEY NAME='Menu:Insert:Map:Continents'>Continents</KEY>
+    <KEY NAME='Menu:Insert:Map:CountriesLow'>Countries (low res)</KEY>
+    <KEY NAME='Menu:Insert:Map:CountriesHigh'>Countries (high res)</KEY>
+    <KEY NAME='Menu:Insert:Map:Rivers'>Rivers</KEY>
+    <KEY NAME='Menu:Insert:Map:Lakes'>Lakes</KEY>
+    <KEY NAME='Menu:Insert:Map:Cities'>Cities</KEY>
+    <KEY NAME='Menu:Insert:Map:States'>United States</KEY>
+    <KEY NAME='Menu:Insert:Map:Provinces'>Canadian Provinces</KEY>
+
+    <KEY NAME='Menu:Operations'>Operations</KEY>
+    <KEY NAME='Menu:Operations:OperationsBrowser'>Operations Browser...</KEY>
+
+    <KEY NAME='Menu:Operations:Macros'>Macros</KEY>
+    <KEY NAME='Menu:Operations:StartRecording'>Start Recording</KEY>
+    <KEY NAME='Menu:Operations:StopRecording'>Stop Recording</KEY>
+    <KEY NAME='Menu:Operations:RunMacro'>Run Macro...</KEY>
+    <KEY NAME='Menu:Operations:MacroEditor'>Macro Editor...</KEY>
+    <KEY NAME='Menu:Operations:Statistics'>Statistics...</KEY>
+    <KEY NAME='Menu:Operations:Histogram'>Histogram</KEY>
+
+    <KEY NAME='Menu:Operations:Filter'>Filter</KEY>
+    <KEY NAME='Menu:Operations:Convolution'>Convolution</KEY>
+    <KEY NAME='Menu:Operations:DifferenceOfGaussians'>Difference of Gaussians</KEY>
+    <KEY NAME='Menu:Operations:Emboss'>Emboss</KEY>
+    <KEY NAME='Menu:Operations:Laplacian'>Laplacian</KEY>
+    <KEY NAME='Menu:Operations:Median'>Median</KEY>
+    <KEY NAME='Menu:Operations:Prewitt'>Prewitt</KEY>
+    <KEY NAME='Menu:Operations:Roberts'>Roberts</KEY>
+    <KEY NAME='Menu:Operations:Sobel'>Sobel</KEY>
+    <KEY NAME='Menu:Operations:Smooth'>Smooth</KEY>
+    <KEY NAME='Menu:Operations:UnsharpMask'>Unsharp Mask</KEY>
+
+    <KEY NAME='Menu:Operations:CurveFit'>Curve Fitting</KEY>
+
+    <KEY NAME='Menu:Operations:Rotate'>Rotate</KEY>
+    <KEY NAME='Menu:Operations:RotateLeft'>Rotate Left</KEY>
+    <KEY NAME='Menu:Operations:RotateRight'>Rotate Right</KEY>
+    <KEY NAME='Menu:Operations:RotateByAngle'>Rotate By Angle</KEY>
+
+    <KEY NAME='Menu:Operations:FlipHoriz'>Flip Horizontal</KEY>
+    <KEY NAME='Menu:Operations:FlipVert'>Flip Vertical</KEY>
+
+    <KEY NAME='Menu:Operations:Transform'>Transform</KEY>
+    <KEY NAME='Menu:Operations:Resample'>Resample</KEY>
+    <KEY NAME='Menu:Operations:RotateData'>Rotate Data</KEY>
+    <KEY NAME='Menu:Operations:ScaleData'>Scale Data</KEY>
+    <KEY NAME='Menu:Operations:InvertImage'>Invert Image</KEY>
+    <KEY NAME='Menu:Operations:ByteScale'>Byte Scale</KEY>
+
+    <KEY NAME='Menu:Operations:Morph'>Morph</KEY>
+    <KEY NAME='Menu:Operations:Dilate'>Dilate</KEY>
+    <KEY NAME='Menu:Operations:DilateDesc'>Perform the morphological dilate operation on the selected item</KEY>
+    <KEY NAME='Menu:Operations:Erode'>Erode</KEY>
+    <KEY NAME='Menu:Operations:ErodeDesc'>Perform the morphological erode operation on the selected item</KEY>
+    <KEY NAME='Menu:Operations:MorphOpen'>Morph Open</KEY>
+    <KEY NAME='Menu:Operations:MorphOpenDesc'>Perform the morphological open (Erode, Dilate) operation</KEY>
+    <KEY NAME='Menu:Operations:MorphClose'>Morph Close</KEY>
+    <KEY NAME='Menu:Operations:MorphCloseDesc'>Perform the morphological close (Dilate, Erode) operation</KEY>
+    <KEY NAME='Menu:Operations:MorphGradient'>Morph Gradient</KEY>
+    <KEY NAME='Menu:Operations:MorphGradientDesc'>Perform the morphological gradient (Dilate - Erode) operation</KEY>
+    <KEY NAME='Menu:Operations:MorphTophat'>Morph Tophat</KEY>
+    <KEY NAME='Menu:Operations:MorphTophatDesc'>Perform the morphological tophat (Image - Open) operation</KEY>
+
+    <KEY NAME='Menu:Operations:Contour'>Contour</KEY>
+    <KEY NAME='Menu:Operations:Image'>Image</KEY>
+    <KEY NAME='Menu:Operations:MapProjection'>Map Projection...</KEY>
+    <KEY NAME='Menu:Operations:MapRegisterImage'>Map Register Image...</KEY>
+    <KEY NAME='Menu:Operations:Crop'>Crop</KEY>
+    <KEY NAME='Menu:Operations:CropDesc'>Click &amp; drag within image to define crop box</KEY>
+    <KEY NAME='Menu:Operations:RegionGrow'>Region Grow</KEY>
+    <KEY NAME='Menu:Operations:Surface'>Surface</KEY>
+    <KEY NAME='Menu:Operations:PlotProfile'>Plot Profile</KEY>
+    <KEY NAME='Menu:Operations:LineProfile'>Line Profile</KEY>
+    <KEY NAME='Menu:Operations:LineProfileDesc'>Click &amp; drag to draw, &lt;Shift&gt; = constrain, &lt;Ctrl&gt; = center</KEY>
+
+    <KEY NAME='Menu:Operations:Volume'>Volume</KEY>
+    <KEY NAME='Menu:Operations:ImagePlane'>Image Plane</KEY>
+    <KEY NAME='Menu:Operations:Isosurface'>Isosurface</KEY>
+    <KEY NAME='Menu:Operations:IntVolume'>Interval Volume</KEY>
+    <KEY NAME='Menu:Operations:RenderVol'>Render Volume</KEY>
+    <KEY NAME='Menu:Operations:LaunchiImage'>Launch iImage</KEY>
+
+    <KEY NAME='Menu:Operations:DataRange'>Data Range</KEY>
+    <KEY NAME='Menu:Operations:DataRangeDesc'>Click &amp; drag bounding box, or click controls to zoom or scroll range</KEY>
+    <KEY NAME='Menu:Operations:SurfContour'>Surface Contour</KEY>
+
+    <KEY NAME='Menu:Operations:Vector'>Vector</KEY>
+    <KEY NAME='Menu:Operations:Vector:Streamlines'>Streamlines</KEY>
+    <KEY NAME='Menu:Operations:Vector:ContourMagnitude'>Contour Magnitude</KEY>
+    <KEY NAME='Menu:Operations:Vector:ContourDirection'>Contour Direction</KEY>
+
+    <KEY NAME='Menu:ROI:Rectangle'>ROI Rectangle</KEY>
+    <KEY NAME='Menu:ROI:RectangleDesc'>Click &amp; drag to draw, hold &lt;Shift&gt; for square, &lt;Ctrl&gt; to center</KEY>
+    <KEY NAME='Menu:ROI:Oval'>ROI Oval</KEY>
+    <KEY NAME='Menu:ROI:OvalDesc'>Click &amp; drag to draw, &lt;Shift&gt; = circle, &lt;Ctrl&gt; = center</KEY>
+    <KEY NAME='Menu:ROI:Polygon'>ROI Polygon</KEY>
+    <KEY NAME='Menu:ROI:PolygonDesc'>Click to insert new vertex, double-click to end polygon</KEY>
+    <KEY NAME='Menu:ROI:Freehand'>ROI Freehand</KEY>
+    <KEY NAME='Menu:ROI:FreehandDesc'>Click &amp; drag to draw</KEY>
+
+    <KEY NAME='Menu:Window'>Window</KEY>
+    <KEY NAME='Menu:Window:DataManager'>Data Manager...</KEY>
+    <KEY NAME='Menu:Window:VisualizationBrowser'>Visualization Browser...</KEY>
+    <KEY NAME='Menu:Window:CanvasZoom'>Canvas Zoom</KEY>
+    <KEY NAME='Menu:Window:ZoomonResize'>Zoom on Resize</KEY>
+    <KEY NAME='Menu:Window:Layout'>Layout...</KEY>
+    <KEY NAME='Menu:Window:FittoView'>Fit to View</KEY>
+    <KEY NAME='Menu:Window:IDLCommandLineFocus'>Show IDL Command Line</KEY>
+
+    <KEY NAME='Menu:Help'>Help</KEY>
+    <KEY NAME='Menu:Help:HelponiTools'>Help on iTools</KEY>
+    <KEY NAME='Menu:Help:HelpontheiToolsDataManager'>Help on the iTools Data Manager</KEY>
+    <KEY NAME='Menu:Help:HelpontheiToolsParameterEditor'>Help on the iTools Parameter Editor</KEY>
+    <KEY NAME='Menu:Help:HelponSelectedItem'>Help on Selected Item</KEY>
+    <KEY NAME='Menu:Help:HelponthisiTool'>Help on this iTool</KEY>
+    <KEY NAME='Menu:Help:AboutiTools'>About iTools</KEY>
+
+  </LANGUAGE>
+
+</IDLffLangCat>

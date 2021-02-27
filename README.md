@@ -11,6 +11,12 @@ NMC集合预报工具箱数据后处理程序以及前端界面程序.
 若有问题, 请[留言](https://github.com/nmcdev/nmc_ens_toolkits/issues).
 
 # Update:
+* 2021年2月，发布版本1.3
+  - 修正极端天气指数的读取错误
+  - 修正积雪深度的计算错误, ECMWF的实际积雪深度并不能直接用模式输出, 而用输出积雪和雪密度[计算得到](https://confluence.ecmwf.int/pages/viewpage.action?pageId=155325734)
+  - 适应GEFS的升级, 实现对31个集合成员的显示支持
+  - 增加降雪, 冻雨的任意时段累积集合预报显示分析.
+
 * 2019年8月，发布版本1.2
   -增加对GRAPES_REPS区域集合预报数据支持，新增逐1小时降水、雷达回波等集合预报产品.
 

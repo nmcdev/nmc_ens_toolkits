@@ -1,0 +1,57 @@
+% $Id: prolog.ps,v 1.6 2004/03/24 17:16:36 kschultz Exp $
+%+ prolog.ps -- Prolog for IDL generated PostScript files
+%+ Copyright (c) 1988-2015 Exelis Visual Information Solutions, Inc. All Rights Reserved.
+%v 5
+/$IDL_DICT 40 dict def
+$IDL_DICT begin
+
+/bdef { bind def } bind def
+/C {currentpoint newpath moveto} bdef
+/CP {currentpoint} bdef	% Put the currentpoint (x, y) on the stack
+/D {currentpoint stroke moveto} bdef
+/F {closepath fill} bdef
+/K { setgray } bdef  % set gray level.
+/M {moveto} bdef	% Move current point absolute
+/N {rmoveto} bdef	% Move current point relative
+/P {lineto} bdef	% Lineto
+/R {rlineto} bdef	% Relative line to
+/S {gsave show grestore} bdef % Show a string, leave current point unchanged
+	% Get the current X path position on the stack		-- Y xpos
+/X {currentpoint pop} bdef
+	% Draw a point
+/Z {gsave currentpoint lineto 20 setlinewidth 1 setlinecap stroke grestore}
+	bdef
+
+
+% Linestyles -- Note: These have to change if the IDL internal scaling changes
+/L0 {[] 0 setdash} bdef
+/L1 {[40 100] 0 setdash} bdef
+/L2 {[200 200] 0 setdash} bdef
+/L3 {[200 100 50 100] 0 setdash} bdef
+/L4 {[300 100 50 100 50 100 50 100] 0 setdash} bdef
+/L5 {[400 200] 0 setdash} bdef
+
+% Commands for loading fonts using either the default encoding vector
+% or the ISOLatin1 encoding. In either case, the syntax is:
+%
+%	fontname scalefactor FONT -
+/STDFONT { findfont exch scalefont setfont } bdef
+/ISOFONT { findfont dup length dict begin
+    { 1 index /FID ne {def} {pop pop} ifelse } forall
+    /Encoding ISOLatin1Encoding def currentdict end /idltmpfont exch
+    definefont exch scalefont setfont } bdef
+
+% Most fonts with StandardEncoding have a bullet character mapped
+% at position 183. This fact is used by IDL to generate the !MX character.
+% The ISOLatin1 mapping lacks this character. This command loads a standard
+% encoding of a font that has the character and outputs it.
+%
+%	scalefactor ISOBULLET -
+/ISOBULLET { gsave /Helvetica findfont exch scalefont setfont
+	     (\267) show currentpoint grestore moveto} bdef
+
+% Use butt joints at angles < 47.15 degrees
+/MITERLIMIT { 2.5 setmiterlimit } bdef
+
+end			% IDL_DICT
+

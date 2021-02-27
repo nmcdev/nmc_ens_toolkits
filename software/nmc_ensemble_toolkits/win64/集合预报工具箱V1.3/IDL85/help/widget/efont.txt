@@ -1,0 +1,82 @@
+	EFONT - Simple Vector-Drawn Font Editor
+
+EFONT is a widget-based vector font editor for the IDL fonts.  It
+operates on a copy of the vector font file, hersh1.chr, in the current
+directory.  Character representations may be edited, scaled, moved,
+and loaded from other fonts.  After editing characters, the font is
+then saved in the local copy of hersh1.chr.
+
+Top-line controls are:
+
+Done: Exits the program.  Does NOT save the working copy of the font.
+
+File / Save Character:
+File / Save Font:
+File / Read Character:
+File / Read Font:  These pull-down buttons allow the interchange of
+	individual characters and fonts.  The description of a single
+	character or font is saved in the designated file.  The
+	character or font with the current index is transferred.
+Help: Prints this text.
+Save Font:  Saves the working copy of the font in the local copy of
+	hersh1.chr.  The font index may be set/changed when saving.
+	Font indices range from 3 to 29.
+Load - Font:  Loads the indicated font from the hersh1.chr file.
+Load - Character: Loads designated character from an existing font.
+	Character codes may be entered as octal (0nnn), hexidecimal
+	(0xnn), or decimal numbers. 
+Load - Character, View Only:  Creates a new window and displays the
+	given character.  Click on the new window to remove it.
+Zoom - Selects the zoom factor for the character display.  Default
+	zoom = 16.
+Set 8 bits - Converts the current font (which should be a 7 bit font) 
+	to an 8 bit font by adding 128 empty characters.
+
+
+		Character Display
+
+Select a character to edit by clicking on its cell in the font display
+window or by explicitly loading the character from the load menu.
+
+A green grid is displayed with the origin of the character cell
+outlined in red.  The width of the character is marked by a blue
+vertical line.  The character is drawn in white.  To add a vector,
+click with the left mouse button and drag to the end of the vector.
+To remove the nearest vector to the mouse vector, click with the
+middle mouse button.
+
+Once the character is edited to your satisfaction, click the Save
+button to save the character in the working copy of the current font.
+
+
+Controls for the Character Display are:
+
+View Font - Reverts to the font display.
+Redraw - Redraws the current character.
+Save - Saves the current character in the current working font and
+	reverts to the font display.
+Move/Scale, Move - Moves the vectors within the current cell.  After
+	selecting this button, click on a point in the character display and
+	drag it to the new destination.  The translated character is then
+	drawn when the button is released.
+Move/Scale, Move & Duplicate - Adds a new copy of the vectors within
+	the current cell, translated as with "Move/Scale, Move".
+Move/Scale, Scale - Scales all vectors of the current vector by the
+	given X and Y factors which are selected by clicking and dragging on
+	the mouse.  For example, to expand by a factor of 1 to 2 in the X
+	direction, while shrinking by a factor of  5 to 4 in the Y direction,
+	move the mouse to cell X=1, Y=5, and then drag the mouse to
+	X=2, Y=4.
+Current Char: An editable text widget showing the character code of
+	the current character.  You can copy a character from one cell
+	to another by loading the character and then entering the new code
+	in this text widget.
+Position: Indicates the cell coordinates of the mouse.
+Width:  An editable text widget containing the width of the current
+	character.  To change this, enter the new width followed by a Carriage
+	Return. 
+Offset: The character's vertical offset.  (Currently not used)
+Scale:  The character's scale factor.  (Currently not used)
+
+
+

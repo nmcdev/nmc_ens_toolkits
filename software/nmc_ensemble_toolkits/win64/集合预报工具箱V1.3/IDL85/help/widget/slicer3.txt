@@ -1,0 +1,646 @@
+NAME:
+      SLICER3
+
+PURPOSE:
+      Widget based application to visualize 3D data.
+      This program superseeds the "SLICER" program.
+
+CATEGORY:
+      Volume display / rendering.
+
+CALLING SEQUENCE:
+
+      SLICER3 [, hData3D]
+
+INPUTS:
+      hData3D:    A pointer to the 3D data, or an array of pointers
+                  to multiple 3D arrays.   If multiple arrays are specified,
+                  they all must have the same X, Y, and Z dimensions.
+                  This parameter is optional.   The default is to use a 3D
+                  array created from BYTARR(2,2,2).   While running SLICER3,
+                  the user may interactively load data via the file menu
+                  (see example).   If data is loaded in this fashion,
+                  any data passed to SLICER3 via a pointer (or pointers) is
+                  deleted, and the pointers become invalid.
+
+KEYWORD PARAMETERS:
+      DETACH:     If set, then the drawing area is placed in a base that is
+                  detached from the control panel.   The drawing area can
+                  only be detached if Slicer3 is not run in modal mode.
+      MODAL:      If set, then Slicer3 will block user interaction with all
+                  other widgets until the user quits Slicer3.   If Slicer3
+                  is started from some other widget-based application,
+                  it is usually advisable to run Slicer3 in Modal mode.
+      GROUP:      This keyword specifies a widget ID of the group leader.
+                  If the specified widget is destroyed, Slicer3 is also
+                  destroyed.   If Slicer3 is started from a widget
+                  application, then GROUP should ALWAYS be specified.
+                  See example.
+      DATA_NAMES: A string array of names for the data. The names appear
+                  on the droplist widget for the current data. If the
+                  number of elements of DATA_NAMES is less than the
+                  number of elements in hData3D then default names will
+                  be generated for the unnamed data.
+
+COMMON BLOCKS:
+      COMMON colors, r, g, b, cur_red, cur_green, cur_blue
+                  These common variables are used by the "STRETCH",
+                  "LOADCT", and "XLOADCT" commands.
+
+SIDE EFFECTS:
+                  Slicer3 modifies the current color table, as well as
+                  various elements of the plotting system (ie, the "!X",
+                  "!Y", "!Z", "!P", and "!MAP" system variables).
+                  If the "MODAL" keyword is set (usually a good idea),
+                  then SLICER3 will, upon exit, restore these system
+                  variables (and the color tables) to the values they
+                  had when SLICER3 was started.
+                  Slicer3 sets the position for the light source and
+                  enables back-facing polygons to be drawn (see the
+                  IDL "SET_SHADING" command).
+
+                  Slicer3 overwrites the existing contents of the
+                  Z-buffer.   Upon exiting Slicer3, the Z-buffer contents
+                  are the same as what was last displayed by Slicer3.
+
+                  Slicer3 breaks the color table into 6 "bands", based upon
+                  the number of available colors (max_color=!D.N_COLORS
+                  on 8-bit displays, and max_color=256 on 24-bit displays) :
+
+                     Band start index:    Band end index:    Used for:
+                     -----------------    ---------------    ---------
+
+                     0                    nColor-1           X Slices.
+                     nColor               (2*nColor)-1       Y Slices.
+                     2*nColor             (3*nColor)-1       Z Slices.
+                     3*nColor             (4*nColor)-1       Iso-surfaces.
+                     4*nColor             (5*nColor)-1       Projections.
+
+                     Where:
+                             nColor = (max_color - 9) / 5
+
+                     Note that the value of !D.N_Colors can vary from
+                     machine to machine, and from run to run, depending
+                     upon available system resources.   Also, !D.N_Colors
+                     is usually not set by IDL until the first window has
+                     been created (or realized) in that IDL session.
+
+                  Annotation colors are the last "band", and they are
+                  set up as :
+
+                     Color index:     Color:
+                     -------------    ------
+
+                     max_color - 1    White.
+                     max_color - 2    Yellow.
+                     max_color - 3    Cyan.
+                     max_color - 4    Purple.
+                     max_color - 5    Red.
+                     max_color - 6    Green.
+                     max_color - 7    Blue.
+                     max_color - 8    Black.
+
+                  On 24-bit displays, improved performance can often be
+                  gained by running Slicer3 in 8-bit mode.   This can be
+                  accomplished (on some platforms) by entering the following
+                  command at the start of the IDL session (before any
+                  windows are created):
+
+                     Device, Pseudo_Color=8
+
+                  See the documentation for additional information.
+
+RESTRICTIONS:
+      The data used by Slicer3 must meet the following conditions:
+         * The data must have three dimensions.
+         * The minimum size of the data array must be 2x2x2.
+         * If multiple volumes are loaded, they all must have the
+           same dimensions.
+
+PROCEDURE:
+
+      "File" menu:
+
+         "Load":
+                 Select a file containing a 3D array (or arrays) to load
+                 into Slicer3.   The file must have been written in a
+                 certain binary format.   For each data array in the file,
+                 the following values are present:
+
+                    data item                     data type     bytes
+                    --------------------------    ----------    ------
+
+                    Number of dimensions          long          4
+                    in array.   Note that
+                    this is always 3 for
+                    valid Slicer3 data.
+
+                    Size of first dimension.      long          4
+                    Size of second dimension.     long          4
+                    Size of third dimension.      long          4
+
+                       If multiple arrays are present in the file,
+                       they must all have the same dimensions.
+
+                    Data type (1 through 5)       long          4
+                    (see the IDL "SIZE"
+                    function for types).
+
+                    Total number of elements.     long          4
+                    (dimX*dimY*dimZ).
+
+                       Note that the all of the above values are the
+                       exact output of the IDL "SIZE" function.
+
+                    Number of characters          long          4
+                    in data name.
+
+                       Note that the above value is the output from
+                       the IDL "STRLEN" function.
+
+                    Data name.                    byte          strlen()
+
+                    3D data.                      varies        varies
+
+                    Note that the 3D data type and number of bytes
+                    is specified by the "size" information above.
+
+                 Any number of 3D datasets can be concatenated into
+                 a single file of this type (as long as they all have
+                 the same dimensions).
+
+                 (See EXAMPLE, below.)
+
+                 NOTE: Files saved by the "Save Subset" operation
+                 (see below) are suitable for input via the "Load"
+                 operation.
+
+                 Data files that are moved from one platform to
+                 another may not load as expected, due to differing
+                 byte order.   See the "BYTEORDER" and "SWAP_ENDIAN"
+                 IDL commands for details.
+
+         "Save / Save Subset":
+                 Slicer3 must be in "Block" mode for this operation to be
+                 available.   When selected, a subset of the 3D data
+                 enclosed in the current block is written to the chosen
+                 save file.   This subset can then be loaded back into
+                 Slicer3 at any time.   If multiple 3D arrays are
+                 currently available in Slicer3, then multiple subsets
+                 are saved to the file.
+
+         "Save / Save Tiff Image":
+                 When selected, a tiff image of the current Slicer3
+                 contents is saved to the chosen file.   When running in
+                 8-bit mode, a "Class P" palette color Tiff file is created.
+                 In 24-bit mode, a "Class R" (interleaved by image) Tiff
+                 file is created.
+
+         "Quit":
+                 Exits Slicer3.
+
+
+      "Tools" menu:
+
+         "Erase":
+                 Erases the display window and deletes all the objects
+                 in the display list.
+
+         "Delete / ...":
+                 As graphical objects are created, they are added to the
+                 display list.   The "Delete" menu allows the user to
+                 delete a specific object from the list.   When an object
+                 is deleted, the screen is redrawn with the remaining
+                 objects.
+
+         "Colors / Reset Colors":
+                 Selecting this will cause the original color scheme to
+                 be restored.
+
+         "Colors / Differential Shading":
+                 This allows the user to change the percentage of
+                 differential shading applied to the X, Y, and Z slices.
+
+         "Colors / Slice/Block":
+                 This allows the user to use the "XLOADCT" operation
+                 to modify the colors used for slices and blocks.
+                 In some cases, the new colors will not be visible
+                 until the user selects "Done" in the XLOADCT tool.
+
+         "Colors / Surface":
+                 This allows the user to use the "XLOADCT" operation
+                 to modify the colors used for iso-surfaces.
+
+         "Colors / Projection":
+                 This allows the user to use the "XLOADCT" operation
+                 to modify the colors used for projections.
+
+         Note that on some platforms, the selected colors may not
+         become visible until after the "XLOADCT" tool is exited.
+
+         "Options":
+                 This brings up a panel allowing the user to set:
+                    The axis visibility.
+                    The wire-frame cube visibility.
+                    The display window size
+                       (the X and Y dimensions are always the same).
+                 If the user selects "Ok", then the display is redrawn.
+
+
+      "Help" menu:
+
+         "About Slicer":
+                 Brings up help information about Slicer3.
+
+
+      "Data:" pull-down menu:
+                 If multiple datasets are currently available in Slicer3,
+                 this menu allows the selection of the current data.
+                 Slices, blocks, iso-surfaces, etc. are created from
+                 the currently selected data.   If only one dataset
+                 is currently loaded, then this menu is inactive.
+
+
+      "Mode:" pull-down menu:
+                 This menu is used to select the current mode of operation.
+
+
+      Main Draw Window:
+                 Interaction in the main draw window is dependent upon
+                 the currently selected mode ("Slice", "Block", "Surface",
+                 etc., see below).   In general, when coordinate input is
+                 required from the user, it is performed by clicking a
+                 mouse button on the "surface" of the wire-frame cube that
+                 surrounds the data.   This 3D location is then used as
+                 the basis for whatever input is needed.   In most cases,
+                 the "front" side of the cube is used.   In a few cases,
+                 the coordinate input is on the "back" side of the cube.
+
+
+      "Slice" mode:
+                 To display a slice, click and drag the left mouse button
+                 on the wire-frame cube.   When the button is released, a
+                 slice through the data will be drawn at that location.
+
+         "Draw" mode:
+                 When in Draw mode, new slices will be merged into
+                 the current Z-buffer contents.
+
+         "Expose" mode:
+                 When in Expose mode, new slices will be drawn in
+                 front of everything else.
+
+         "Orthogonal" mode:
+                 When in Orthogonal mode, use the left mouse button
+                 in the big window to position and draw an orthogonal
+                 slicing plane.   Clicking the right mouse button in
+                 the big window (or any mouse button in the small
+                 window) will toggle the slicing plane orientation.
+            "X":
+                 This sets the orthogonal slicing plane orientation
+                 to be perpendicular to the X axis.
+            "Y":
+                 This sets the orthogonal slicing plane orientation
+                 to be perpendicular to the Y axis.
+            "Z":
+                 This sets the orthogonal slicing plane orientation
+                 to be perpendicular to the Z axis.
+
+         "Oblique" mode:
+                 Clicking any mouse button in the small window will
+                 reset the oblique slicing plane to its default
+                 orientation.
+            "Normal" mode:
+                 When in this mode, click and drag the left mouse
+                 button in the big window to set the surface normal
+                 for the oblique slicing plane.
+            "Center" mode:
+                 When in this mode, click and drag the left mouse
+                 button in the big window to set the center point
+                 for the surface normal.
+            "Display":
+                 Clicking this button will cause an oblique slicing
+                 plane to be drawn.
+
+
+      "Block" mode:
+                 When in Block mode, use the left mouse button in the
+                 big window to set the location for the "purple" corner
+                 of the block.   Use the right mouse button to locate
+                 the opposite "blue" corner of the block.
+
+                 When in Block mode, the "Save Subset" operation under
+                 the main "File" menu is available.
+
+            "Add" mode:
+                 When in this mode, the block will be "added" to the
+                 current Z-buffer contents.
+
+            "Subtract" mode:
+                 When in this mode, the block will be "subtracted"
+                 from the current Z-buffer contents.   Subtract mode
+                 is only effective when the block intersects some
+                 other object in the display (such as an iso-surface).
+
+            "Display":
+                 Clicking this button will cause the block to be drawn.
+
+
+       "Surface" mode:
+                 In iso-surface is like a contour line on a contour
+                 map.   On one side of the line, the elevation is higher
+                 than the contour level, and on the other side of the
+                 line, the elevation is lower than the contour level.
+                 An iso-surface, however, is a 3D surface that passes
+                 through the data such that the data values on one side
+                 of the surface are higher than the threshold value,
+                 and on the other side of the surface, the data values
+                 are lower than the threshold value.
+
+                 When in Surface mode, a logarithmic histogram plot
+                 of the data is displayed in the small draw window.
+                 Click and drag a mouse button on this plot to set
+                 the iso-surface threshold value.   This value is
+                 also shown in the text widget below the plot.
+                 The threshold value may also be set by typing a
+                 new value in this text widget.   The histogram
+                 plot is affected by the current threshold settings.
+                 (See Threshold mode, below).
+
+            "Low":
+                 Selecting this mode will cause the iso-surface polygon
+                 facing to face towards the lower data values.
+                 Usually, this is the mode to use when the iso-surface
+                 is desired to surround high data values.
+
+            "High":
+                 Selecting this mode will cause the iso-surface polygon
+                 facing to face towards the higher data values.
+                 Usually, this is the mode to use when the iso-surface
+                 is desired to surround low data values.
+
+            "Shading" pull-down menu:
+                 Iso-surfaces are normally rendered with light-source
+                 shading.   If multiple datasets are currently loaded,
+                 then this menu allows the selection of a different
+                 3D array for the source of the iso-surface shading
+                 values.   If only one dataset is currently loaded,
+                 then this menu is inactive.
+
+            "Display":
+                 Clicking this button will cause the iso-surface to
+                 be created and drawn.   Iso-surfaces often consist
+                 of tens of thousands of polygons, and can sometimes
+                 take considerable time to create and render.
+
+
+       "Projection" mode:
+                 A "voxel" projection of a 3D array is the projection
+                 of the data values within that array onto a viewing
+                 plane.   This is similar to taking an X-ray image of
+                 a 3D object.
+
+            "Max" mode:
+                 Select this mode for a Maximum intensity projection.
+
+            "Avg" mode:
+                 Select this mode for an Average intensity projection.
+
+            "Low" mode:
+                 Select this mode for a Low resolution projection.
+
+            "Med" mode:
+                 Select this mode for a Medium resolution projection.
+
+            "High" mode:
+                 Select this mode for a High resolution projection.
+
+            "Depth Queue %":
+                 Use the slider to set the depth queue percent.
+                 A value of 50, for example, indicates that the
+                 farthest part of the projection will be 50 % as
+                 bright as the closest part of the projection.
+
+            "Display":
+                 Clicking this button will cause the projection to
+                 be calculated and drawn.   Projections can sometimes
+                 take considerable time to display.   Higher resolution
+                 projections take more computation time.
+
+
+       "Threshold" mode:
+                 When in Threshold mode, a logarithmic histogram plot
+                 of the data is displayed in the small draw window.
+                 Click and drag the left mouse button on this plot to
+                 set the minimum and maximum threshold values.
+                 To expand a narrow range of data values into the
+                 full range of available colors, set the threshold
+                 range before displaying slices, blocks, or projections.
+                 The threshold settings also affect the histogram
+                 plot in "Surface" mode.   The minimum and maximum
+                 threshold values are also shown in the text widgets
+                 below the histogram plot.
+
+                 Click and drag the right mouse button on the histogram
+                 plot to set the transparency threshold.
+                 Portions of any slice, block, or projection that are
+                 less than the transparency value are not drawn (clear).
+                 Iso-surfaces are not affected by the transparency
+                 threshold.   The transparency threshold value is also
+                 shown in a text widget below the histogram plot.
+
+          "Min":
+                 In this text widget, a minimum threshold value can
+                 be entered.
+
+          "Max":
+                 In this text widget, a maximum threshold value can
+                 be entered.
+
+          "Transp.":
+                 In this text widget, a transparency threshold value
+                 can be entered.
+
+
+       "Profile" mode:
+                 In Profile mode, a plot is displayed showing the
+                 data values along a line.   This line is also shown
+                 superimposed on the data in the main draw window.
+                 The bottom of the plot corresponds to the "purple"
+                 end of the line, and the top of the plot corresponds
+                 to the "blue" end of the line.
+
+          "Orthogonal" mode:
+                 Click and drag the left mouse button to position the
+                 profile line, based upon a point on the "front"
+                 faces of the wire-frame cube.   Click and drag the
+                 right mouse button to position the profile line,
+                 based upon a point on the "back" faces of the
+                 wire-frame cube.   As the profile line is moved,
+                 The profile plot is dynamically updated.
+
+          "Oblique" mode:
+                 Click and drag the left mouse button to position the
+                 "purple" end of the profile line on one of the "front"
+                 faces of the wire-frame cube.   Click and drag the
+                 right mouse button to position the "blue" end of the
+                 profile line on one of the "back" faces of the
+                 wire-frame cube.   As the profile line is moved,
+                 The profile plot is dynamically updated.
+
+
+       "Probe" mode:
+                 In Probe mode, click and drag a mouse button over
+                 an object in the main draw window.   The actual
+                 X-Y-Z location within the data volume is displayed
+                 in the three text widgets.   Also, the data value
+                 at that 3D location is displayed in the status
+                 window, above the main draw window.   If the cursor
+                 is inside the wire-frame cube, but not on any object,
+                 then the status window displays "No data value", and
+                 the three text widgets are empty.  If the cursor is
+                 outside the wire-frame cube, then the status window
+                 and text widgets are empty.
+
+          "X":
+                 Use this text widget to enter the X coordinate for
+                 the probe.
+
+          "Y":
+                 Use this text widget to enter the Y coordinate for
+                 the probe.
+
+          "Z":
+                 Use this text widget to enter the Z coordinate for
+                 the probe.
+
+
+       "View" mode:
+                 In view mode, a small window shows the orientation
+                 of the data cube in the current view.   As view
+                 parameters are changed, this window is dynamically
+                 updated.   The main draw window is then updated
+                 when the user clicks on "Display", or exits View
+                 mode.
+
+       "Display":
+                 Clicking on this button will cause the objects in
+                 the main view window to be drawn in the new view.
+                 If any view parameters have been changed since
+                 the last time the main view was updated, the main
+                 view will be automatically redrawn when the user
+                 exits View mode.
+
+       1st Rotation:
+                 Use this slider to set the angle of the first view
+                 rotation (in degrees).   The droplist widget adjacent
+                 to the slider indicates which axis this rotation is
+                 about.
+
+       2nd Rotation:
+                 Use this slider to set the angle of the second view
+                 rotation (in degrees).   The droplist widget adjacent
+                 to the slider indicates which axis this rotation is
+                 about.
+
+       "Zoom %":
+                 Use this slider to set the zoom factor percent.
+                 Depending upon the view rotations, Slicer3 may
+                 override this setting to ensure that all eight
+                 corners of the data cube are within the window.
+
+       "Z %":
+                 Use this slider to set a scale factor for the Z
+                 axis (to compensate for the data's aspect ratio).
+
+
+EXAMPLE:
+      Example 1:
+      ----------
+      Create a data save file suitable for dynamic loading into
+      Slicer3.
+
+
+              ; Store some 3D data in a variable called "data_1".
+              data_1 = INDGEN(20,30,40)
+
+              ; Store some 3D data in a variable called "data_2".
+              data_2 = FINDGEN(20,30,40)
+
+              ; Define the names for the datasets (their names will
+              ; appear in the "Data:" pull-down menu in Slicer3.
+
+              data_1_name = 'Test Data 1'
+              data_2_name = 'Data 2'
+
+              ; Select a data file name.
+              dataFile = DIALOG_PICKFILE()
+
+              ; Write the file.
+
+              GET_LUN, lun
+              OPENW, lun, dataFile
+
+              WRITEU, lun, SIZE(data_1)
+              WRITEU, lun, STRLEN(data_1_name)
+              WRITEU, lun, BYTE(data_1_name)
+              WRITEU, lun, data_1
+
+              WRITEU, lun, SIZE(data_2)
+              WRITEU, lun, STRLEN(data_2_name)
+              WRITEU, lun, BYTE(data_2_name)
+              WRITEU, lun, data_2
+
+              CLOSE, lun
+              FREE_LUN, lun
+
+
+      Example 2:
+      ----------
+      Run Slicer3 with data passed to it at startup.
+
+              ; Create some 3D data.
+              data = INDGEN(20,30,40)
+
+              ; Create a pointer to the data, and use the "/NO_COPY"
+              ; keyword to save memory.
+              h_data = PTR_NEW(data, /NO_COPY)
+
+              ; Start up Slicer3.
+              SLICER3, h_data, /MODAL
+
+              ; If the user did not interactively load any data into
+              ; Slicer3 (via the "File/Load" menu), then the original
+              ; pointer to the data still exists (and the original data
+              ; will still reside in memory).   To free it, use:
+
+              if PTR_VALID(h_data) then PTR_FREE, h_data
+
+              ; If the pointer is no longer valid, then that indicates
+              ; that the user interactively loaded data into Slicer3.
+              ; Any data that is loaded interactively is automatically
+              ; deleted when the user exits Slicer3.
+
+              ; Note that the last contents of the main view window in
+              ; Slicer3 still resides in the Z-buffer.   To access this
+              ; image after exiting Slicer3, perform the following actions:
+
+              current_device = !D.Name
+              SET_PLOT, 'Z'
+              image_buffer = TVRD()
+              depth_buffer = TVRD(CHANNEL=1, /WORDS)
+              SET_PLOT, current_device
+              TV, image_buffer
+
+              ; Note that the image contained in "image_buffer" will look
+              ; "correct" only if the colors loaded by Slicer3 have not
+              ; been changed since the user exited Slicer3.
+
+
+MODIFICATION HISTORY:
+      Daniel Carr - RSI, Fri Nov 22 15:43:36 MST 1996
+      Daniel Carr - RSI, Fri Jan 10 12:08:01 MST 1997
+         Fixed bugs and added muti-dataset capability.
+      Alan Youngblood, Daniel Carr - RSI, Wed Feb 11 10:07:32 MST 1998
+         Modified routine to use pointers.
+

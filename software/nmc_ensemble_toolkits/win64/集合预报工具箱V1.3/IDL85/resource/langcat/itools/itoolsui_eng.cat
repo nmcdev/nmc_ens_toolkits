@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- $Id: //depot/Release/ENVI53_IDL85/idl/idldir/resource/langcat/itools/itoolsui_eng.cat#1 $  -->
+<!DOCTYPE IDLffLangCat SYSTEM 'langcat.dtd'>
+
+<IDLffLangCat APPLICATION="itools ui" VERSION="1.0" AUTHOR="Exelis Visual Information Solutions">
+
+  <LANGUAGE NAME='ENG'>
+
+    <KEY NAME='UI:WrongNumArgs'>Incorrect number of arguments.</KEY>
+    <KEY NAME='UI:InvalidParent'>Invalid widget identifier.</KEY>
+    <KEY NAME='UI:InvalidOUI'>oUI is not a valid object.</KEY>
+    <KEY NAME='UI:InvalidUI'>UI is not a valid object.</KEY>
+    <KEY NAME='UI:InvalidTool'>Tool is not a valid object.</KEY>
+    <KEY NAME='UI:ShowDialog'>Show dialog next time</KEY>
+    <KEY NAME='UI:NeedGroupLeader'>Group Leader is required</KEY>
+
+    <KEY NAME='UI:OK'>OK</KEY>
+    <KEY NAME='UI:Help'>Help</KEY>
+    <KEY NAME='UI:Cancel'>Cancel</KEY>
+    <KEY NAME='UI:CancelPad'> Cancel </KEY>
+    <KEY NAME='UI:CancelPad2'>  Cancel  </KEY>
+
+    <KEY NAME='Dialog:Value'>Value: </KEY>
+    <KEY NAME='UI:AbsoluteDeviation'>Absolute Deviation:</KEY>
+    <KEY NAME='UI:ApproxVol'>Approximate volume:</KEY>
+    <KEY NAME='UI:Area'>Area:</KEY>
+    <KEY NAME='UI:AreaUnderCurve'>Area under curve:</KEY>
+    <KEY NAME='UI:AreaUnderSurf'>Area under surface:</KEY>
+    <KEY NAME='UI:At'>at:</KEY>
+    <KEY NAME='UI:AvSlope'>Average slope:</KEY>
+    <KEY NAME='UI:Centroid'>Centroid:</KEY>
+    <KEY NAME='UI:Channel'>Channel</KEY>
+    <KEY NAME='UI:CurveLen'>Curve length:</KEY>
+    <KEY NAME='UI:Dimensions'>Dimensions:</KEY>
+    <KEY NAME='UI:Elements'>elements</KEY>
+    <KEY NAME='UI:Kurtosis3'>Kurtosis-3:</KEY>
+    <KEY NAME='UI:Maximum'>Maximum:</KEY>
+    <KEY NAME='UI:Mean'>Mean:</KEY>
+    <KEY NAME='UI:Minimum'>Minimum:</KEY>
+    <KEY NAME='UI:NonFiniteValues'>Non-finite values:</KEY>
+    <KEY NAME='UI:NoPoints'>No points in mask</KEY>
+    <KEY NAME='UI:NumSurfTris'>Nbr of Surf Tris:</KEY>
+    <KEY NAME='UI:NumTetra'>Nbr of Tetrahedra:</KEY>
+    <KEY NAME='UI:NumTriangles'>Nbr of Triangles:</KEY>
+    <KEY NAME='UI:NumVerts'>Nbr of Vertices:</KEY>
+    <KEY NAME='UI:Perimeter'>Perimeter:</KEY>
+    <KEY NAME='UI:Pixels'>Number of pixels:</KEY>
+    <KEY NAME='UI:Skewness'>Skewness:</KEY>
+    <KEY NAME='UI:StandardDeviation'>Standard Deviation:</KEY>
+    <KEY NAME='UI:StatsTitle'>iTools Statistics</KEY>
+    <KEY NAME='UI:SurfArea'>Surface Area:</KEY>
+    <KEY NAME='UI:Total'>Total:</KEY>
+    <KEY NAME='UI:Variance'>Variance:</KEY>
+    <KEY NAME='UI:Volume'>Volume:</KEY>
+    <KEY NAME='UI:XCentroid'>X Centroid:</KEY>
+    <KEY NAME='UI:XMoment'>X Moment:</KEY>
+    <KEY NAME='UI:YCentroid'>Y Centroid:</KEY>
+    <KEY NAME='UI:YMoment'>Y Moment:</KEY>
+    <KEY NAME='UI:ZCentroid'>Z Centroid:</KEY>
+    <KEY NAME='UI:ZMoment'>Z Moment:</KEY>
+
+    <KEY NAME='UI:Channel:Gray'>Gray</KEY>
+    <KEY NAME='UI:Channel:Red'>Red</KEY>
+    <KEY NAME='UI:Channel:Green'>Green</KEY>
+    <KEY NAME='UI:Channel:Blue'>Blue</KEY>
+    <KEY NAME='UI:Channel:Alpha'>Alpha</KEY>
+
+    <KEY NAME='UI:DM:DMtitle'>Data Manager Browser</KEY>
+    <KEY NAME='UI:DM:PEtitle'>Parameter Editor</KEY>
+    <KEY NAME='UI:DM:IVtitle'>Insert Visualization</KEY>
+    <KEY NAME='UI:DM:Apply'>Apply</KEY>
+    <KEY NAME='UI:DM:Insert'>Insert</KEY>
+    <KEY NAME='UI:DM:OK'>  OK  </KEY>
+    <KEY NAME='UI:DM:Dismiss'>Dismiss</KEY>
+    <KEY NAME='UI:DM:Cancel'>Cancel</KEY>
+    <KEY NAME='UI:DM:Help'> Help </KEY>
+    <KEY NAME='UI:DM:buttonImportVar'>Import Variable...</KEY>
+    <KEY NAME='UI:DM:buttonImportFile'>Import File...</KEY>
+
+    <KEY NAME='UI:ParmEditTable:Add'>Add</KEY>
+    <KEY NAME='UI:ParmEditTable:Replace'>Replace</KEY>
+    <KEY NAME='UI:ParmEditTable:Remove'>Remove</KEY>
+    <KEY NAME='UI:ParmEditTable:Required'>R</KEY>
+    <KEY NAME='UI:ParmEditTable:ColHead:Req'> </KEY>
+    <KEY NAME='UI:ParmEditTable:ColHead:Parm'>Parameter</KEY>
+    <KEY NAME='UI:ParmEditTable:ColHead:Item'>Current data item</KEY>
+    <KEY NAME='UI:ParmEditTable:ColHead:Type'>Supported data types</KEY>
+    <KEY NAME='UI:ParmEditTable:Visualization'>Visualization: </KEY>
+
+    <KEY NAME='UI:cwCompTree:NoHelp'>Unable to retrieve Help service.</KEY>
+    <KEY NAME='UI:cwCompTree:NoObjFromID'>Unable to retrieve object from identifier:</KEY>
+    <KEY NAME='UI:cwCompTree:UndefClassname'>Classname is undefined for this object descriptor</KEY>
+    <KEY NAME='UI:cwCompTree:Help'>Help...</KEY>
+
+    <KEY NAME='UI:cwDataLevel:InitValsNENLevels'>Number of INITIAL_VALUES must match NLEVELS.</KEY>
+    <KEY NAME='UI:cwDataLevel:BadSetVal'>Invalid value for CW_ITDATALEVEL_SETVALUE.</KEY>
+
+    <KEY NAME='UI:cwDM:deleteTitle'>Delete Data</KEY>
+    <KEY NAME='UI:cwDM:deleteMessage'>Delete Data item: </KEY>
+    <KEY NAME='UI:cwDM:deleteAllTitle'>Delete All Data</KEY>
+    <KEY NAME='UI:cwDM:deleteAllMessage'>Delete all data</KEY>
+    <KEY NAME='UI:cwDM:deleteError'>Unknown error during data delete.</KEY>
+    <KEY NAME='UI:cwDM:deleteErrorTitle'>Error</KEY>
+    <KEY NAME='UI:cwDM:BadData'>Invalid Data Item.</KEY>
+    <KEY NAME='UI:cwDM:BadDataTitle'>Invalid Data</KEY>
+    <KEY NAME='UI:cwDM:NoAllData'>No data items exist</KEY>
+    <KEY NAME='UI:cwDM:NoData'>No data item selected.</KEY>
+    <KEY NAME='UI:cwDM:NoDataTitle'>No Data</KEY>
+    <KEY NAME='UI:cwDM:dupError'>Unknown error during data duplication.</KEY>
+    <KEY NAME='UI:cwDM:dupErrorTitle'>Error</KEY>
+    <KEY NAME='UI:cwDM:buttonDelete'>Delete</KEY>
+    <KEY NAME='UI:cwDM:buttonDup'>Duplicate</KEY>
+    <KEY NAME='UI:cwDM:buttonDeleteAll'>Delete all data</KEY>
+
+    <KEY NAME='UI:cwMenuBar:BadStruct'>INTERNAL ERROR: Invalid Structure</KEY>
+
+    <KEY NAME='UI:cwMultDataLevel:BadSetVal'>Invalid value for CW_ITMULTIDATALEVEL_SETVALUE.</KEY>
+    <KEY NAME='UI:cwMultDataLevel:BadInitVal'>INITIAL_VALUES has incorrect number of elements.</KEY>
+    <KEY NAME='UI:cwMultDataLevel:ApplyAll'>Link All</KEY>
+
+    <KEY NAME='UI:cwOpPrev:ErrTitle'>cw_itoperationpreview</KEY>
+
+    <KEY NAME='UI:cwPanel:ClosePanel'>Close Panel</KEY>
+    <KEY NAME='UI:cwPanel:OpenPanel'>Open Panel</KEY>
+
+    <KEY NAME='UI:cwPropSheet:ObjNEComp1'>Selected object does not match current property sheet component.</KEY>
+    <KEY NAME='UI:cwPropSheet:ObjNEComp2'>Ignoring property value change.</KEY>
+    <KEY NAME='UI:cwPropSheet:ShowSimple'>Show Simple Property List</KEY>
+    <KEY NAME='UI:cwPropSheet:ShowAdvanced'>Show Advanced Property List</KEY>
+
+    <KEY NAME='UI:cwStatusBar:NoBar'>Tool has no registered status bar segments</KEY>
+
+    <KEY NAME='UI:cwToolBar:BadBitmap'>Invalid bitmap specified</KEY>
+
+    <KEY NAME='UI:cwPanes:ShowRtPanel'>Show right panel</KEY>
+    <KEY NAME='UI:cwPanes:ShowLftPanel'>Show left panel</KEY>
+    <KEY NAME='UI:cwPanes:HideRtPanel'>Hide right panel</KEY>
+    <KEY NAME='UI:cwPanes:HideLftPanel'>Hide left panel</KEY>
+
+    <KEY NAME='UI:diaWiz:Title'>IDL Wizard</KEY>
+    <KEY NAME='UI:diaWiz:Title1'>: Step </KEY>
+    <KEY NAME='UI:diaWiz:Title2'> of </KEY>
+    <KEY NAME='UI:diaWiz:Next'>Next</KEY>
+    <KEY NAME='UI:diaWiz:OK'>     OK     </KEY>
+    <KEY NAME='UI:diaWiz:Finish'>Finish</KEY>
+    <KEY NAME='UI:diaWiz:BadScreens'>Screens must be a scalar string or string array.</KEY>
+    <KEY NAME='UI:diaWiz:Help'>   Help   </KEY>
+    <KEY NAME='UI:diaWiz:Back'>Back</KEY>
+    <KEY NAME='UI:diaWiz:Cancel'> Cancel </KEY>
+
+    <KEY NAME='UI:UIdef:BadTool'>Invalid tool object provided</KEY>
+    <KEY NAME='UI:UIdef:NoUINesting'>Identifier nesting of UI Services is not allowed</KEY>
+
+    <KEY NAME='UI:UIExport:Title'>Export</KEY>
+
+    <KEY NAME='UI:UIOpen:Title'>Open</KEY>
+
+    <KEY NAME='UI:UISaveAs:Title'>Save As</KEY>
+
+    <KEY NAME='UI:UIIntVol:Title'>Interval Volume Value Selector</KEY>
+
+    <KEY NAME='UI:UIIsoSurf:Title'>Isosurface Value Selector</KEY>
+
+    <KEY NAME='UI:UISubVol:Title'>SubVolume Extents Selector</KEY>
+
+    <KEY NAME='UI:UIContLev:Title'>Contour Levels</KEY>
+
+    <KEY NAME='UI:UIMapGridLines:Title'>Map Grid Lines</KEY>
+
+    <KEY NAME='UI:UIMapProj:Title'>Map Projection</KEY>
+
+    <KEY NAME='UI:wdAbout:Title'>About iTools</KEY>
+    <KEY NAME='UI:wdAbout:OK'>  OK  </KEY>
+    <KEY NAME='UI:wdAbout:BadLeader'>Group Leader is required</KEY>
+    <KEY NAME='UI:wdAbout:Line01'>IDL Intelligent Tools</KEY>
+    <KEY NAME='UI:wdAbout:Line02'></KEY>
+    <KEY NAME='UI:wdAbout:Line03'>Version:             </KEY>
+    <KEY NAME='UI:wdAbout:Line04'>IDL Version:     </KEY>
+    <KEY NAME='UI:wdAbout:Line05'></KEY>
+    <KEY NAME='UI:wdAbout:Line06'></KEY>
+    <KEY NAME='UI:wdAbout:Line07'>(c) Copyright 2007-2009 ITT Visual Information Solutions. All rights reserved.</KEY>
+    <KEY NAME='UI:wdBrowsPref:Title'>IDL iTool Browser</KEY>
+    <KEY NAME='UI:wdBrowsPref:RestDef'>Restore Defaults</KEY>
+    <KEY NAME='UI:wdBrowsPref:OK'>OK</KEY>
+    <KEY NAME='UI:wdBrowsPref:Help'>Help</KEY>
+    <KEY NAME='UI:wdBrowsPref:Cancel'> Cancel </KEY>
+
+    <KEY NAME='UI:wdCLExport:Title'>Export to IDL Variables</KEY>
+    <KEY NAME='UI:wdCLExport:Param'>Parameter</KEY>
+    <KEY NAME='UI:wdCLExport:VarName'>Variable Name</KEY>
+    <KEY NAME='UI:wdCLExport:Export'> Export </KEY>
+    <KEY NAME='UI:wdCLExport:Cancel'> Cancel </KEY>
+
+    <KEY NAME='UI:wdCLImport:Error'>Error while importing variable</KEY>
+    <KEY NAME='UI:wdCLImport:ErrorTitle'>Import Error</KEY>
+    <KEY NAME='UI:wdCLImport:Title'>IDL Variable Browser</KEY>
+    <KEY NAME='UI:wdCLImport:VarName'>IDL Variable Name:</KEY>
+    <KEY NAME='UI:wdCLImport:Type'>Type:</KEY>
+    <KEY NAME='UI:wdCLImport:Value'>Value:</KEY>
+    <KEY NAME='UI:wdCLImport:DataName'>Data Import Name:</KEY>
+    <KEY NAME='UI:wdCLImport:ImType'>Import Type:</KEY>
+    <KEY NAME='UI:wdCLImport:Import'> Import </KEY>
+    <KEY NAME='UI:wdCLImport:Close'> Close </KEY>
+    <KEY NAME='UI:wdCLImport:Imported'>Imported: </KEY>
+
+    <KEY NAME='UI:wdCtrlMacro:Continue'>Continue</KEY>
+    <KEY NAME='UI:wdCtrlMacro:Pause'>Pause</KEY>
+    <KEY NAME='UI:wdCtrlMacro:HideSteps'>Hide steps</KEY>
+    <KEY NAME='UI:wdCtrlMacro:DispSteps'>Display steps</KEY>
+    <KEY NAME='UI:wdCtrlMacro:HideItems'>Hide macro items</KEY>
+    <KEY NAME='UI:wdCtrlMacro:ShowItems'>Show macro items</KEY>
+    <KEY NAME='UI:wdCtrlMacro:Step'>Step</KEY>
+    <KEY NAME='UI:wdCtrlMacro:Stop'>Stop</KEY>
+    <KEY NAME='UI:wdCtrlMacro:SetStepDelay'>Set step delay</KEY>
+    <KEY NAME='UI:wdCtrlMacro:StepDelay'>Step delay</KEY>
+
+    <KEY NAME='UI:wdConvKern:BadKernel'>Kernel must be a one or two-dimensional array.</KEY>
+    <KEY NAME='UI:wdConvKern:Title'>Convolution Kernel Editor</KEY>
+    <KEY NAME='UI:wdConvKern:Def'>Default</KEY>
+    <KEY NAME='UI:wdConvKern:OK'>OK</KEY>
+    <KEY NAME='UI:wdConvKern:Cancel'>  Cancel  </KEY>
+    <KEY NAME='UI:wdConvKern:Boxcar'>Boxcar</KEY>
+    <KEY NAME='UI:wdConvKern:Gauss'>Gaussian</KEY>
+    <KEY NAME='UI:wdConvKern:EdgeHor'>Edge Horizontal</KEY>
+    <KEY NAME='UI:wdConvKern:EdgeVer'>Edge Vertical</KEY>
+    <KEY NAME='UI:wdConvKern:EdgeDiagR'>Edge Diagonal Right</KEY>
+    <KEY NAME='UI:wdConvKern:EdgeDiagL'>Edge Diagonal Left</KEY>
+    <KEY NAME='UI:wdConvKern:LineHor'>Line Horizontal</KEY>
+    <KEY NAME='UI:wdConvKern:LineVer'>Line Vertical</KEY>
+    <KEY NAME='UI:wdConvKern:LineDiagR'>Line Diagonal Right</KEY>
+    <KEY NAME='UI:wdConvKern:LineDiagL'>Line Diagonal Left</KEY>
+    <KEY NAME='UI:wdConvKern:Laplac'>Laplacian 4</KEY>
+    <KEY NAME='UI:wdConvKern:Emboss'>Emboss</KEY>
+    <KEY NAME='UI:wdConvKern:UserDef'>User-defined</KEY>
+
+    <KEY NAME='UI:wdCurveFit:ChiSqr'>Chi-square</KEY>
+    <KEY NAME='UI:wdCurveFit:Signif'>Significance</KEY>
+    <KEY NAME='UI:wdCurveFit:NA'>not available</KEY>
+    <KEY NAME='UI:wdCurveFit:OutofRange'>out of range</KEY>
+    <KEY NAME='UI:wdCurveFit:FitFail'>Curve fit failed.</KEY>
+    <KEY NAME='UI:wdCurveFit:BadInput'>Arguments X and Y must have the same number of values.</KEY>
+    <KEY NAME='UI:wdCurveFit:Title'>Curve Fitting</KEY>
+    <KEY NAME='UI:wdCurveFit:Model'>Curve fitting model:</KEY>
+    <KEY NAME='UI:wdCurveFit:InitParams'>Initial parameters and results:</KEY>
+    <KEY NAME='UI:wdCurveFit:Param1'>A</KEY>
+    <KEY NAME='UI:wdCurveFit:Param2'>B</KEY>
+    <KEY NAME='UI:wdCurveFit:Param3'>C</KEY>
+    <KEY NAME='UI:wdCurveFit:Param4'>D</KEY>
+    <KEY NAME='UI:wdCurveFit:Param5'>E</KEY>
+    <KEY NAME='UI:wdCurveFit:Param6'>F</KEY>
+
+    <KEY NAME='UI:wdDataBT:Title'>Data Display Bottom/Top Selector</KEY>
+
+    <KEY NAME='UI:Style:Import'>Import Style</KEY>
+
+    <KEY NAME='UI:wdExportWiz:BadVar'>Invalid IDL Variable name. Converting to valid name.</KEY>
+    <KEY NAME='UI:wdExportWiz:EnterVar'>Enter the desired IDL variable name.</KEY>
+    <KEY NAME='UI:wdExportWiz:DataName'>Data Name:</KEY>
+    <KEY NAME='UI:wdExportWiz:DataType'>Data Type:</KEY>
+    <KEY NAME='UI:wdExportWiz:Desc'>Description:</KEY>
+    <KEY NAME='UI:wdExportWiz:VarName'>IDL Variable Name:</KEY>
+    <KEY NAME='UI:wdExportWiz:Exists'> already exists.</KEY>
+    <KEY NAME='UI:wdExportWiz:Replace?'>Do you want to replace it?</KEY>
+    <KEY NAME='UI:wdExportWiz:SelFile'>Select the desired file name and file type.</KEY>
+    <KEY NAME='UI:wdExportWiz:FileName'>File Name:</KEY>
+    <KEY NAME='UI:wdExportWiz:FileType'>File Type:</KEY>
+    <KEY NAME='UI:wdExportWiz:Scale'>Scale:</KEY>
+    <KEY NAME='UI:wdExportWiz:Width'>  Width:</KEY>
+    <KEY NAME='UI:wdExportWiz:Height'>Height:</KEY>
+    <KEY NAME='UI:wdExportWiz:NoWriters'>No output file writers available.</KEY>
+    <KEY NAME='UI:wdExportWiz:NoExport'>Unable to export to a file.</KEY>
+    <KEY NAME='UI:wdExportWiz:WinView'>Window, View or </KEY>
+    <KEY NAME='UI:wdExportWiz:SelDesired'>Select the desired </KEY>
+    <KEY NAME='UI:wdExportWiz:DataExp'>Data item to export.</KEY>
+    <KEY NAME='UI:wdExportWiz:Name'>Name:</KEY>
+    <KEY NAME='UI:wdExportWiz:Type'>Type:</KEY>
+    <KEY NAME='UI:wdExportWiz:BadType'>Type Not Supported</KEY>
+    <KEY NAME='UI:wdExportWiz:Prompt1'>This wizard helps you export data from the current tool,</KEY>
+    <KEY NAME='UI:wdExportWiz:Prompt2'>determining the data source and the resultant destination.</KEY>
+    <KEY NAME='UI:wdExportWiz:SelDest'>Select the export destination:</KEY>
+    <KEY NAME='UI:wdExportWiz:ToFileDemo'>To a File (disabled for demo mode)</KEY>
+    <KEY NAME='UI:wdExportWiz:ToFile'>To a File</KEY>
+    <KEY NAME='UI:wdExportWiz:ToVar'>To an IDL Variable</KEY>
+    <KEY NAME='UI:wdExportWiz:Title'>IDL Data Export Wizard</KEY>
+
+    <KEY NAME='UI:wdFileImport:BadFile'>Invalid File</KEY>
+    <KEY NAME='UI:wdFileImport:NoFile'>The specified file does not exist.</KEY>
+    <KEY NAME='UI:wdFileImport:Title'>File Import</KEY>
+    <KEY NAME='UI:wdFileImport:SelectFile'>Select the desired data file from the system.</KEY>
+    <KEY NAME='UI:wdFileImport:FileName'>File name:</KEY>
+    <KEY NAME='UI:wdFileImport:ImportOpt'>Import options:</KEY>
+    <KEY NAME='UI:wdFileImport:ImportName'>Data import name:</KEY>
+
+    <KEY NAME='UI:wdGridWiz:Data'>Data: </KEY>
+    <KEY NAME='UI:wdGridWiz:Result'>Result: </KEY>
+    <KEY NAME='UI:wdGridWiz:Grid'>Grid: </KEY>
+
+    <KEY NAME='UI:wdImgMenu:Title'>Image</KEY>
+    <KEY NAME='UI:wdImgMenu:ROIs'>ROIs: </KEY>
+    <KEY NAME='UI:wdImgMenu:PixLoc'>Pixel Location:</KEY>
+    <KEY NAME='UI:wdImgMenu:PixVal'>Pixel Value:</KEY>
+    <KEY NAME='UI:wdImgMenu:PixScale'>Pixel Scale:</KEY>
+    <KEY NAME='UI:wdImgMenu:X'>X:</KEY>
+    <KEY NAME='UI:wdImgMenu:Y'>  Y:</KEY>
+    <KEY NAME='UI:wdImgMenu:EditPal'>Edit Palette...</KEY>
+    <KEY NAME='UI:wdImgMenu:Channel'>Channel:</KEY>
+    <KEY NAME='UI:wdImgMenu:Min'>Min:</KEY>
+    <KEY NAME='UI:wdImgMenu:Max'>Max:</KEY>
+
+    <KEY NAME='UI:wdImportWiz:Default'>Default</KEY>
+    <KEY NAME='UI:wdImportWiz:DefVis'>The default visualization for the given data type.</KEY>
+    <KEY NAME='UI:wdImportWiz:SelVis'>Select the desired visualization type to create.</KEY>
+    <KEY NAME='UI:wdImportWiz:Name'>Name:</KEY>
+    <KEY NAME='UI:wdImportWiz:Desc'>Description:</KEY>
+    <KEY NAME='UI:wdImportWiz:BadFile'>Invalid File</KEY>
+    <KEY NAME='UI:wdImportWiz:NoFile'>The specified file does not exist.</KEY>
+    <KEY NAME='UI:wdImportWiz:NoISV'>Unable to import .ISV files.</KEY>
+    <KEY NAME='UI:wdImportWiz:NoISVFormat'>This format is unsupported by this operation.</KEY>
+    <KEY NAME='UI:wdImportWiz:BadFileTitle'>Invalid File</KEY>
+    <KEY NAME='UI:wdImportWiz:SelectData'>Select the desired data file from the system.</KEY>
+    <KEY NAME='UI:wdImportWiz:FileName'>File Name:</KEY>
+    <KEY NAME='UI:wdImportWiz:Options'>Import Options:</KEY>
+    <KEY NAME='UI:wdImportWiz:DataName'>Data Import Name:</KEY>
+    <KEY NAME='UI:wdImportWiz:SelectDataCL'>Select the desired data item from the IDL Command Line.</KEY>
+    <KEY NAME='UI:wdImportWiz:Type'>Type:</KEY>
+    <KEY NAME='UI:wdImportWiz:Value'>Value:</KEY>
+    <KEY NAME='UI:wdImportWiz:ImportType'>Import Type:</KEY>
+    <KEY NAME='UI:wdImportWiz:Prompt1'>This wizard helps you import data into the current tool,</KEY>
+    <KEY NAME='UI:wdImportWiz:Prompt2'>determining the data source and the resultant visualization.</KEY>
+    <KEY NAME='UI:wdImportWiz:SelectLoc'>Select the data source location:</KEY>
+    <KEY NAME='UI:wdImportWiz:FromFile'>From a File</KEY>
+    <KEY NAME='UI:wdImportWiz:FromVar'>From an IDL Variable</KEY>
+    <KEY NAME='UI:wdImportWiz:Title'>IDL Data Import Wizard</KEY>
+
+    <KEY NAME='UI:wdIsoVal:Title'>Value Selector</KEY>
+    <KEY NAME='UI:wdIsoVal:Decimate'>Mesh quality: % of original surface</KEY>
+
+    <KEY NAME='UI:wdMacroEdit:SaveChanges'>Macros have changed. Would you like to save them?</KEY>
+    <KEY NAME='UI:wdMacroEdit:Title2'>Macros Editor</KEY>
+    <KEY NAME='UI:wdMacroEdit:Import'>Import</KEY>
+    <KEY NAME='UI:wdMacroEdit:Export'>Export</KEY>
+    <KEY NAME='UI:wdMacroEdit:BadButton'>Unknown button: </KEY>
+    <KEY NAME='UI:wdMacroEdit:Title'>iTools Macro Editor</KEY>
+    <KEY NAME='UI:wdMacroEdit:File'>File</KEY>
+    <KEY NAME='UI:wdMacroEdit:Edit'>Edit</KEY>
+    <KEY NAME='UI:wdMacroEdit:Run'>Run</KEY>
+    <KEY NAME='UI:wdMacroEdit:Help'>Help</KEY>
+    <KEY NAME='UI:wdMacroEdit:New'>New</KEY>
+    <KEY NAME='UI:wdMacroEdit:Import...'>Import...</KEY>
+    <KEY NAME='UI:wdMacroEdit:Export...'>Export...</KEY>
+    <KEY NAME='UI:wdMacroEdit:Save'>Save</KEY>
+    <KEY NAME='UI:wdMacroEdit:Close'>Close</KEY>
+    <KEY NAME='UI:wdMacroEdit:CopyTTip'>Copy into selected folder above</KEY>
+    <KEY NAME='UI:wdMacroEdit:DelTTip'>Delete selected item from above</KEY>
+    <KEY NAME='UI:wdMacroEdit:Cut'>Cut</KEY>
+    <KEY NAME='UI:wdMacroEdit:Copy'>Copy</KEY>
+    <KEY NAME='UI:wdMacroEdit:Paste'>Paste</KEY>
+    <KEY NAME='UI:wdMacroEdit:Delete'>Delete</KEY>
+    <KEY NAME='UI:wdMacroEdit:Dup'>Duplicate</KEY>
+    <KEY NAME='UI:wdMacroEdit:MoveUp'>Move Item Up</KEY>
+    <KEY NAME='UI:wdMacroEdit:MoveDown'>Move Item Down</KEY>
+    <KEY NAME='UI:wdMacroEdit:RunMacro'>Run Macro</KEY>
+
+    <KEY NAME='UI:wdMapPanel:Title'>Map</KEY>
+    <KEY NAME='UI:wdMapPanel:Loc'>Location:</KEY>
+    <KEY NAME='UI:wdMapPanel:DataVal'>Data Value:</KEY>
+    <KEY NAME='UI:wdMapPanel:LongLimit'>Longitude limits:</KEY>
+    <KEY NAME='UI:wdMapPanel:Min'>  Min: </KEY>
+    <KEY NAME='UI:wdMapPanel:Max'>  Max: </KEY>
+    <KEY NAME='UI:wdMapPanel:LatLimit'>Latitude limits:</KEY>
+    <KEY NAME='UI:wdMapPanel:EditProj'>Edit Projection...</KEY>
+
+    <KEY NAME='UI:MapRegImage:Title'>IDL Map Register Image</KEY>
+    <KEY NAME='UI:MapRegImage:Description'>This wizard helps you register your image data onto a map projection.</KEY>
+    <KEY NAME='UI:MapRegImage:ChooseUnits'>Please choose the units for your image grid:</KEY>
+    <KEY NAME='UI:MapRegImage:Meters'>Meters, georeferenced to a map projection</KEY>
+    <KEY NAME='UI:MapRegImage:Degrees'>Degrees longitude/latitude (geographic coordinates)</KEY>
+    <KEY NAME='UI:MapRegImage:GridLabel'>Please choose the grid start and spacing for your image:</KEY>
+    <KEY NAME='UI:MapRegImage:ChooseProj'>To finish, choose the map projection associated with this image:</KEY>
+    <KEY NAME='UI:MapRegImage:Dataspace'>When finished, update dataspace to match image projection</KEY>
+
+    <KEY NAME='UI:wdOpPreview:Title'>IDL Property Sheet</KEY>
+
+    <KEY NAME='UI:wdOpPalEdit:Title'>Palette Editor</KEY>
+
+    <KEY NAME='UI:wdPrintPreview:BadPrintSrv'>Invalid print service</KEY>
+    <KEY NAME='UI:wdPrintPreview:BadPrinter'>Invalid printer</KEY>
+    <KEY NAME='UI:wdPrintPreview:Title'>Print Preview</KEY>
+    <KEY NAME='UI:wdPrintPreview:XMargin'>X Margin</KEY>
+    <KEY NAME='UI:wdPrintPreview:YMargin'>Y Margin</KEY>
+    <KEY NAME='UI:wdPrintPreview:Width'>Width</KEY>
+    <KEY NAME='UI:wdPrintPreview:Height'>Height</KEY>
+    <KEY NAME='UI:wdPrintPreview:Inches'>Inches</KEY>
+    <KEY NAME='UI:wdPrintPreview:Cms'>Centimeters</KEY>
+    <KEY NAME='UI:wdPrintPreview:Reset'>Reset</KEY>
+    <KEY NAME='UI:wdPrintPreview:Help'>Help</KEY>
+    <KEY NAME='UI:wdPrintPreview:Orientation'>Orientation:</KEY>
+    <KEY NAME='UI:wdPrintPreview:Portrait'>Portrait</KEY>
+    <KEY NAME='UI:wdPrintPreview:Landscp'>Landscape</KEY>
+    <KEY NAME='UI:wdPrintPreview:Center'>Center</KEY>
+    <KEY NAME='UI:wdPrintPreview:Border'>Border</KEY>
+    <KEY NAME='UI:wdPrintPreview:BorderTTip'>Show border in print preview</KEY>
+    <KEY NAME='UI:wdPrintPreview:Setup'>Setup...</KEY>
+    <KEY NAME='UI:wdPrintPreview:Print'>Print</KEY>
+    <KEY NAME='UI:wdPrintPreview:Close'>Close</KEY>
+    <KEY NAME='UI:wdPrintPreview:CloseTTip'>Save settings and close preview</KEY>
+
+    <KEY NAME='UI:wdProgBar:Hour'>hour</KEY>
+    <KEY NAME='UI:wdProgBar:Hours'>hours</KEY>
+    <KEY NAME='UI:wdProgBar:Minute'>minute</KEY>
+    <KEY NAME='UI:wdProgBar:Minutes'>minutes</KEY>
+    <KEY NAME='UI:wdProgBar:Second'>second</KEY>
+    <KEY NAME='UI:wdProgBar:Seconds'>seconds</KEY>
+    <KEY NAME='UI:wdProgBar:Title'>Progress...</KEY>
+
+    <KEY NAME='UI:wdPromptTxt:Title'>Prompt</KEY>
+
+    <KEY NAME='UI:wdRunMacro:Title'>Run Macro</KEY>
+    <KEY NAME='UI:wdRunMacro:SelMacro'>Select Macro:</KEY>
+    <KEY NAME='UI:wdRunMacro:MacroDesc'>Macro Description:</KEY>
+    <KEY NAME='UI:wdRunMacro:DispSteps'>Display intermediate steps</KEY>
+    <KEY NAME='UI:wdRunMacro:StepDelay'>   Step delay (seconds)</KEY>
+    <KEY NAME='UI:wdRunMacro:Help'>  Help  </KEY>
+
+    <KEY NAME='UI:wdSplash:Version'>Version: </KEY>
+
+    <KEY NAME='UI:wdStyleApply:Title'>Apply Style</KEY>
+    <KEY NAME='UI:wdStyleApply:ApSelected'>Apply to selected items</KEY>
+    <KEY NAME='UI:wdStyleApply:ApView'>Apply to all items in current view</KEY>
+    <KEY NAME='UI:wdStyleApply:ApAll'>Apply to all items in all views</KEY>
+    <KEY NAME='UI:wdStyleApply:UpdateTool'>Update current tool style</KEY>
+    <KEY NAME='UI:wdStyleApply:Help'>  Help  </KEY>
+
+    <KEY NAME='UI:wdStyleCreate:Title'>Create Style from Selection</KEY>
+    <KEY NAME='UI:wdStyleCreate:EnterName'>Enter new style name:</KEY>
+    <KEY NAME='UI:wdStyleCreate:CreateSel'>Create using selected items</KEY>
+    <KEY NAME='UI:wdStyleCreate:CreateAll'>Create using all items in view</KEY>
+    <KEY NAME='UI:wdStyleCreate:Help'>  Help  </KEY>
+
+    <KEY NAME='UI:wdStyleEdit:SaveChanges'>Styles have changed. Would you like to save them?</KEY>
+    <KEY NAME='UI:wdStyleEdit:SaveChangesTitle'>Style Editor</KEY>
+    <KEY NAME='UI:wdStyleEdit:Import'>Import</KEY>
+    <KEY NAME='UI:wdStyleEdit:Export'>Export</KEY>
+    <KEY NAME='UI:wdStyleEdit:BadButton'>Unknown button: </KEY>
+    <KEY NAME='UI:wdStyleEdit:Cut'>Cut</KEY>
+    <KEY NAME='UI:wdStyleEdit:Copy'>Copy</KEY>
+    <KEY NAME='UI:wdStyleEdit:Paste'>Paste</KEY>
+    <KEY NAME='UI:wdStyleEdit:Delete'>Delete</KEY>
+    <KEY NAME='UI:wdStyleEdit:Dup'>Duplicate</KEY>
+    <KEY NAME='UI:wdStyleEdit:ApplySelected'>Apply to Selected Items</KEY>
+    <KEY NAME='UI:wdStyleEdit:ApplyView'>Apply to All Items in View</KEY>
+    <KEY NAME='UI:wdStyleEdit:UpdateCurrent'>Update Current Tool Style</KEY>
+    <KEY NAME='UI:wdStyleEdit:Title'>iTools Style Editor</KEY>
+    <KEY NAME='UI:wdStyleEdit:File'>File</KEY>
+    <KEY NAME='UI:wdStyleEdit:Edit'>Edit</KEY>
+    <KEY NAME='UI:wdStyleEdit:Apply'>Apply</KEY>
+    <KEY NAME='UI:wdStyleEdit:Help'>Help</KEY>
+    <KEY NAME='UI:wdStyleEdit:New'>New Style</KEY>
+    <KEY NAME='UI:wdStyleEdit:Import...'>Import...</KEY>
+    <KEY NAME='UI:wdStyleEdit:Export...'>Export...</KEY>
+    <KEY NAME='UI:wdStyleEdit:Save'>Save</KEY>
+    <KEY NAME='UI:wdStyleEdit:Close'>Close</KEY>
+
+    <KEY NAME='UI:wdSubVol:Title'>Value Selector</KEY>
+    <KEY NAME='UI:wdSubVol:VolX'>Volume X Extents</KEY>
+    <KEY NAME='UI:wdSubVol:VolY'>Volume Y Extents</KEY>
+    <KEY NAME='UI:wdSubVol:VolZ'>Volume Z Extents</KEY>
+
+    <KEY NAME='UI:wdTxtDisp:SaveAsTitle'>Save As</KEY>
+    <KEY NAME='UI:wdTxtDisp:PrintTitle'>Print</KEY>
+    <KEY NAME='UI:wdTxtDisp:BadText'>Text argument must be a string array.</KEY>
+    <KEY NAME='UI:wdTxtDisp:File'>File</KEY>
+    <KEY NAME='UI:wdTxtDisp:SaveAs'>Save As...</KEY>
+    <KEY NAME='UI:wdTxtDisp:Print'>Print...</KEY>
+    <KEY NAME='UI:wdTxtDisp:Close'>Close</KEY>
+    <KEY NAME='UI:wdTxtDisp:Edit'>Edit</KEY>
+    <KEY NAME='UI:wdTxtDisp:EditTxt'>Edit Text</KEY>
+
+    <KEY NAME='UI:wdTool:Title'>IDL iTool</KEY>
+
+    <KEY NAME='UI:wdToolBar:Title'>Toolbar</KEY>
+
+    <KEY NAME='UI:wdUnknownData:Prompt1'>This wizard will help you convert your data</KEY>
+    <KEY NAME='UI:wdUnknownData:Prompt2'>and create a visualization.</KEY>
+    <KEY NAME='UI:wdUnknownData:Opt1'>Launch the gridding wizard.</KEY>
+    <KEY NAME='UI:wdUnknownData:Opt2'>Select a visualization and specify parameters.</KEY>
+    <KEY NAME='UI:wdUnknownData:Opt3'>Do not create a visualization.</KEY>
+    <KEY NAME='UI:wdUnknownData:Title'>IDL iTools Create Visualization</KEY>
+
+    <KEY NAME='UI:wdWinLayout:Title'>Window Layout</KEY>
+    <KEY NAME='UI:wdWinLayout:Dims'>Dimensions (pixels):</KEY>
+    <KEY NAME='UI:wdWinLayout:Width'>Width:</KEY>
+    <KEY NAME='UI:wdWinLayout:Height'>Height:</KEY>
+    <KEY NAME='UI:wdWinLayout:WinResize'>Automatic window resize</KEY>
+    <KEY NAME='UI:wdWinLayout:Layout'>Layout:</KEY>
+    <KEY NAME='UI:wdWinLayout:Cols'>Columns:</KEY>
+    <KEY NAME='UI:wdWinLayout:Rows'>Rows:</KEY>
+    <KEY NAME='UI:wdWinLayout:Preview'>Preview</KEY>
+
+    <KEY NAME='UI:wdVolMenu:Title'>Volume</KEY>
+    <KEY NAME='UI:wdVolMenu:Name'>Name:</KEY>
+    <KEY NAME='UI:wdVolMenu:Channels'>Data Channels:</KEY>
+    <KEY NAME='UI:wdVolMenu:Render'>Render</KEY>
+    <KEY NAME='UI:wdVolMenu:AutoRender'>Auto-Render</KEY>
+    <KEY NAME='UI:wdVolMenu:Quality'>Quality</KEY>
+    <KEY NAME='UI:wdVolMenu:QualLow'>Low (textures)</KEY>
+    <KEY NAME='UI:wdVolMenu:QualHigh'>High (volume)</KEY>
+    <KEY NAME='UI:wdVolMenu:Boundary'>Boundary</KEY>
+    <KEY NAME='UI:wdVolMenu:BoundaryNone'>None</KEY>
+    <KEY NAME='UI:wdVolMenu:BoundaryWire'>Wire frame</KEY>
+    <KEY NAME='UI:wdVolMenu:BoundarySolid'>Solid walls</KEY>
+    <KEY NAME='UI:wdVolMenu:RenderStep'>Render Step</KEY>
+    <KEY NAME='UI:wdVolMenu:RenderStepX'>X:</KEY>
+    <KEY NAME='UI:wdVolMenu:RenderStepY'>Y:</KEY>
+    <KEY NAME='UI:wdVolMenu:RenderStepZ'>Z:</KEY>
+
+  </LANGUAGE>
+
+</IDLffLangCat>

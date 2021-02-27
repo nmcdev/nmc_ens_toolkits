@@ -1,0 +1,20 @@
+#-----------------------------------------------------------------------------------------
+#						    		Size Correction
+#	Fontname			Filename		Direct	Object
+#-----------------------------------------------------------------------------------------
+"Helvetica"				tt0003m_.ttf	0.746957	1.0
+"Helvetica Bold"			tt0005m_.ttf	0.746957	1.0
+"Helvetica Italic"		tt0004m_.ttf	0.746957	1.0
+"Helvetica Bold Italic"		tt0006m_.ttf	0.746201	1.0
+"Courier"				tt0419m_.ttf	0.675014	1.0
+"Courier Bold"			tt0583m_.ttf	0.661830	1.0
+"Courier Italic"			tt0582m_.ttf	0.675014	1.0
+"Courier Bold Italic"		tt0611m_.ttf	0.661830	1.0
+"Times"				tt0011m_.ttf	0.718560	1.0
+"Times Bold"			tt0013m_.ttf	0.716349	1.0
+"Times Italic"			tt0012m_.ttf	0.718560	1.0
+"Times Bold Italic"		tt0014m_.ttf	0.696755	1.0
+"Symbol"				tt9830z_.ttf	0.833529	1.0
+"Monospace Symbol"		tt9831z_.ttf	0.668945	1.0
+"ENVI Symbols"			envisym_.ttf	1.0		1.0
+"DejaVuSans"			DejaVuSans.ttf	0.625		1.0

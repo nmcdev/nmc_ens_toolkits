@@ -1,0 +1,112 @@
+<idlextensions>
+
+  <readers>
+
+    <reader name='Windows Bitmap'>
+      <read_routine>READ_IMAGE</read_routine>
+      <query_routine>QUERY_BMP</query_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.bmp</extension>
+    </reader>
+
+    <reader name='Comma-Separated Value'>
+      <read_routine>READ_CSV</read_routine>
+      <query_routine>QUERY_CSV</query_routine>
+      <icon>[IDL_BITMAPS]/ascii.bmp</icon>
+      <extension>.csv</extension>
+    </reader>
+
+    <reader name='DICOM Image'>
+      <read_routine>READ_IMAGE</read_routine>
+      <query_routine>QUERY_DICOM</query_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.dcm</extension>
+    </reader>
+
+    <reader name='Graphics Interchange Format'>
+      <read_routine>READ_IMAGE</read_routine>
+      <query_routine>QUERY_GIF</query_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.gif</extension>
+    </reader>
+
+    <reader name='HDF5'>
+      <read_routine>_READ_HDF5</read_routine>
+      <query_routine>H5F_IS_HDF5</query_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.h5</extension>
+    </reader>
+
+    <reader name='iTools State'>
+      <read_routine>_OPEN_ISV</read_routine>
+      <icon>[IDL_BITMAPS]/save.bmp</icon>
+      <extension>.isv</extension>
+    </reader>
+
+    <reader name='JPEG2000'>
+      <read_routine>READ_IMAGE</read_routine>
+      <query_routine>QUERY_JPEG2000</query_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.jp2</extension>
+      <extension>.jpx</extension>
+      <extension>.j2k</extension>
+    </reader>
+
+    <reader name='Joint Photographic Experts Group'>
+      <read_routine>READ_IMAGE</read_routine>
+      <query_routine>QUERY_JPEG</query_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.jpg</extension>
+      <extension>.jpeg</extension>
+    </reader>
+
+    <reader name='Macintosh PICT'>
+      <read_routine>READ_IMAGE</read_routine>
+      <query_routine>QUERY_PICT</query_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.pict</extension>
+      <extension>.pct</extension>
+    </reader>
+
+    <reader name='Portable Network Graphics'>
+      <read_routine>READ_IMAGE</read_routine>
+      <query_routine>QUERY_PNG</query_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.png</extension>
+    </reader>
+
+    <reader name='ESRI Shapefile'>
+      <read_routine>_READ_SHAPE</read_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.shp</extension>
+    </reader>
+
+    <reader name='Tag Image File Format'>
+      <read_routine>READ_IMAGE</read_routine>
+      <query_routine>QUERY_TIFF</query_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.tiff</extension>
+      <extension>.tif</extension>
+    </reader>
+
+    <reader name='ASCII text'>
+      <read_routine>READ_ASCII</read_routine>
+      <query_routine>QUERY_ASCII</query_routine>
+      <icon>[IDL_BITMAPS]/ascii.bmp</icon>
+      <extension>.txt</extension>
+    </reader>
+
+    <reader name='Windows Waveform'>
+      <read_routine>READ_WAV</read_routine>
+      <query_routine>QUERY_WAV</query_routine>
+      <icon>[IDL_BITMAPS]/demo.bmp</icon>
+      <extension>.wav</extension>
+    </reader>
+
+    <reader name='Binary data'>
+      <read_routine>READ_BINARY</read_routine>
+    </reader>
+
+  </readers>
+
+</idlextensions>

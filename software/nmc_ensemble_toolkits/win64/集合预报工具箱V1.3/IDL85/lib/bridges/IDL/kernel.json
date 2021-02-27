@@ -1,0 +1,6 @@
+{
+    "argv": ["python", "-m", "idl_kernel", "-f", "{connection_file}"], 
+    "codemirror_mode": "idl",
+    "display_name": "IDL", 
+    "language": "IDL"
+}

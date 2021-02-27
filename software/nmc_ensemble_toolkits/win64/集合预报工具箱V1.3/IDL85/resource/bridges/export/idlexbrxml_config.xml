@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE IDLObject [
+<!ELEMENT IDLObject (ObjectName?, Properties?, Methods?, Superclasses?)>
+<!ELEMENT ObjectName (#PCDATA)>
+<!ELEMENT Properties (Property*)>
+<!ELEMENT Methods (Method*)>
+<!ELEMENT Superclasses (Superclass*)>
+
+<!ELEMENT Parameters (Parameter*)>
+<!ELEMENT Parameter (ParameterName, Type, Mutability, IsArray, ConvertMajority)>
+<!ELEMENT ParameterName (#PCDATA)>
+<!ELEMENT Type (#PCDATA)>
+<!ELEMENT Mutability (#PCDATA)>
+<!ELEMENT IsArray (#PCDATA)>
+<!ELEMENT ConvertMajority (#PCDATA)>
+
+<!ELEMENT Property (PropertyName, Type, IsArray, ConvertMajority)>
+<!ELEMENT PropertyName (#PCDATA)>
+
+<!ELEMENT Method (MethodName, IsFunction, ReturnType, ReturnIsArray, Parameters)>
+<!ELEMENT MethodName (#PCDATA)>
+<!ELEMENT IsFunction (#PCDATA)>
+<!ELEMENT ReturnType (#PCDATA)>
+<!ELEMENT ReturnIsArray (#PCDATA)>
+
+<!ELEMENT Superclass (SuperclassName)>
+<!ELEMENT SuperclassName (#PCDATA)>
+]>
+<IDLObject/>

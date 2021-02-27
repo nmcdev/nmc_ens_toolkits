@@ -1,0 +1,99 @@
+ PURPOSE:
+    Interactively create color tables using the RGB, CMY,
+    HSV, and HLS color systems using the mouse, three
+    sliders, and a cell for each color index. Single colors
+    can be defined or multiple color indices between two
+    endpoints can be interpolated.
+
+ PROCEDURE:
+    XPALETTE has the following controls:
+
+    Left: Three plots showing the current Red, Green, and
+          Blue vectors.
+
+    Center: A status region containing:
+        1) The total number of colors.
+        2) The current color. XPALETTE allows changing
+           one color at a time. This color is known as
+           the "current color" and is indicated in the
+           color spectrum display with a special marker.
+        3) The current mark index. The mark is used to
+           remember a color index. It is established by
+           pressing the "Set Mark Button" while the current
+           color index is the desired mark index.
+        4) The current color. The special marker used in
+           color spectrum display prevents the user from
+           seeing the color of the current index, but it
+           is visible here.
+
+    A panel of control buttons, which do the following:
+
+        Done: Exits XPALETTE.
+
+        Predefined: Starts XLOADCT to allow selection of one
+            of the predefined color tables. Note that when
+            you change the color map via XLOADCT, XPALETTE
+            is not always able to keep its display accurate.
+            This problem can be overcome by pressing the
+            XPALETTE "Redraw" button after changing things
+            via XLOADCT.
+
+        Help: This text is displayed.
+
+        Redraw: Completely redraws the display using the
+            current state of the color map.
+
+          Set Mark: Set the value of the mark index to the
+            current index.
+
+       Switch Mark: Exchange the mark and the current index.
+
+      Copy Current: Every color lying between the current
+            index and the mark index (inclusive) is given
+            the current color.
+
+       Interpolate: The colors lying between the current
+            index and the mark index are interpolated
+            linearly to lie between the colors of two
+            endpoints.
+
+    Three sliders (R, G, and B) that allow the user to
+    modify the current color.
+
+    Right: A display which shows the current color map as a
+        series of squares. Color index 0 is at the upper
+        left. The color index increases monotonically by
+        rows going left to right and top to bottom.  The
+        current color index is indicated by a special marker
+        symbol. There are 4 ways to change the current
+        color:
+            1) Press any mouse button while the mouse
+               pointer is over the color map display.
+            2) Use the "By Index" slider to move to
+               the desired color index.
+            3) Use the "Row" Slider to move the marker
+               vertically.
+            4) Use the "Column" Slider to move the marker
+               horizontally.
+
+ SIDE EFFECTS:
+    XPALETTE uses two colors from the current color table
+    as drawing foreground and background colors. These
+    are used for the RGB plots on the left, and the
+    current index marker on the right. This means that if
+    the user set these two colors to the same value, the
+    XPALETTE display could become unreadable (like writing
+    on black paper with black ink). XPALETTE minimizes
+    this possibility by noting changes to the color map
+    and always using the brightest available color for the
+    foreground color and the darkest for the background.
+    Thus, the only way to make XPALETTE's display
+    unreadable is to set the entire color map to a single
+    color, which is highly unlikely. The only side effect
+    of this policy is that you may notice XPALETTE
+    redrawing the entire display after you've modified the
+    current color. This simply means that the change has
+    made XPALETTE pick new drawing colors.
+
+    The new color tables are saved in the COLORS common
+    block and loaded to the display.

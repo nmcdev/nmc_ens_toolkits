@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- $Id: //depot/Release/ENVI53_IDL85/idl/idldir/resource/langcat/itools/itoolsstatus_eng.cat#1 $ -->
+
+<!DOCTYPE IDLffLangCat SYSTEM 'langcat.dtd'>
+
+<IDLffLangCat APPLICATION="itools status" VERSION="1.0" AUTHOR="Exelis Visual Information Solutions">
+
+  <LANGUAGE NAME='ENG'>
+
+    <KEY NAME='Status:AnnotatePoly:Text3'> &lt;Esc&gt; to delete previous point</KEY>
+    <KEY NAME='Status:AnnotateText:Text2'>&lt;Ctrl&gt;u/d Super/subscript, &lt;Ctrl&gt;n Normal, &lt;Ctrl&gt;&lt;Enter&gt; Next line</KEY>
+    <KEY NAME='Status:CropBox:CnDDefine'>Click &amp; drag to define crop box</KEY>
+    <KEY NAME='Status:CropBox:CnDResize'>Click &amp; drag to resize</KEY>
+    <KEY NAME='Status:CropBox:CnDTranslate'>Click &amp; drag or use arrow keys to move, double-click to crop</KEY>
+    <KEY NAME='Status:CropBox:Text'>Arrow keys: &lt;Shift&gt; to move in larger increments</KEY>
+    <KEY NAME='Status:CropBoxDefine:Text'>Click &amp; drag to define the crop box</KEY>
+    <KEY NAME='Status:CropBoxResize:Text'>Click &amp; drag to resize</KEY>
+    <KEY NAME='Status:CropBoxTranslate:Text'>Click &amp; drag to move</KEY>
+    <KEY NAME='Status:Framework:AnnotateLine'>Click &amp; drag to draw, &lt;Shift&gt; to constrain, &lt;Ctrl&gt; to draw from center</KEY>
+    <KEY NAME='Status:Framework:ExportingData'>Exporting Data</KEY>
+    <KEY NAME='Status:Framework:Rotate'>Click &amp; drag or use arrow keys</KEY>
+    <KEY NAME='Status:Framework:Rotate1'>Click &amp; drag or use arrow keys to rotate</KEY>
+    <KEY NAME='Status:Framework:Select'>Click to select, or click &amp; drag selection box</KEY>
+    <KEY NAME='Status:Framework:ViewZoomManip'>Click &amp; drag to define box, or click and use mouse scroll wheel</KEY>
+    <KEY NAME='Status:ImagePlane:Center'>Image Plane Center: </KEY>
+    <KEY NAME='Status:ImagePlane:DragToMove'>Click &amp; drag to move</KEY>
+    <KEY NAME='Status:LineManip:Text'>Click &amp; drag to move point, &lt;Shift&gt; to constrain, &lt;Ctrl&gt; to draw from center</KEY>
+    <KEY NAME='Status:Manip:Rotate'>Click &amp; drag to rotate</KEY>
+    <KEY NAME='Status:Manip:Rotate2D1'>Arrow Keys: 5 ,</KEY>
+    <KEY NAME='Status:Manip:Rotate2D2'>&lt;Shift&gt; = 45 ,</KEY>
+    <KEY NAME='Status:Manip:Rotate2D3'>&lt;Ctrl&gt; = 1</KEY>
+    <KEY NAME='Status:Manip:Rotate3D1'>Arrow Keys: &lt;Shift&gt; = larger change, &lt;Ctrl&gt; = smaller change</KEY>
+    <KEY NAME='Status:Manip:ScaleShiftCtrl'>Click &amp; drag to scale, &lt;Shift&gt; to constrain, &lt;Ctrl&gt; to center</KEY>
+    <KEY NAME='Status:Manip:ScaleCtrl'>Click &amp; drag to scale, &lt;Ctrl&gt; to center</KEY>
+    <KEY NAME='Status:Manip:Scale'>Click &amp; drag to scale</KEY>
+    <KEY NAME='Status:Manip:SelectBox'>Click &amp; drag to define box</KEY>
+    <KEY NAME='Status:Manip:ShiftConstrains'>&lt;Shift&gt; to constrain</KEY>
+    <KEY NAME='Status:Manip:Translate'>Click &amp; drag to move</KEY>
+    <KEY NAME='Status:Manip:Translate3D'>&lt;Ctrl&gt;&lt;Shift&gt; to switch directions</KEY>
+    <KEY NAME='Status:Manip:ViewPan'>View Pan: </KEY>
+    <KEY NAME='Status:Manip:ViewPanScroll'>Scroll: </KEY>
+    <KEY NAME='Status:ManipRangePan:Default'>Click to scroll</KEY>
+    <KEY NAME='Status:ManipRangePan:Down'>Click to scroll down</KEY>
+    <KEY NAME='Status:ManipRangePan:Left'>Click to scroll left</KEY>
+    <KEY NAME='Status:ManipRangePan:Right'>Click to scroll right</KEY>
+    <KEY NAME='Status:ManipRangePan:Up'>Click to scroll up</KEY>
+    <KEY NAME='Status:RangeZoom:InX'>Click to zoom in (X only)</KEY>
+    <KEY NAME='Status:RangeZoom:InXY'>Click to zoom in (X and Y)</KEY>
+    <KEY NAME='Status:RangeZoom:InY'>Click to zoom in (Y only)</KEY>
+    <KEY NAME='Status:RangeZoom:InZ'>Click to zoom int (Z only)</KEY>
+    <KEY NAME='Status:RangeZoom:OutX'>Click to zoom out (X only)</KEY>
+    <KEY NAME='Status:RangeZoom:OutXY'>Click to zoom out (X and Y)</KEY>
+    <KEY NAME='Status:RangeZoom:OutY'>Click to zoom out (Y only)</KEY>
+    <KEY NAME='Status:RangeZoom:OutZ'>Click to zoom out (Z only)</KEY>
+    <KEY NAME='Status:ReadChannel'>Read channel </KEY>
+    <KEY NAME='Status:Ready'>Ready</KEY>
+    <KEY NAME='Status:Value:Text'>Value: </KEY>
+    <KEY NAME='Status:AnnotatePoly:Text2'>&lt;Shift&gt; to constrain to 45</KEY>
+    <KEY NAME='Status:Framework:AnnotateFreehand'>Click &amp; drag to draw</KEY>
+    <KEY NAME='Status:Framework:AnnotateOval'>Click &amp; drag to draw, &lt;Shift&gt; draws circle, &lt;Ctrl&gt; draws from center</KEY>
+    <KEY NAME='Status:Framework:AnnotatePolygon'>Click to insert point, double-click to end</KEY>
+    <KEY NAME='Status:Framework:AnnotateRectangle'>Click &amp; drag to draw, &lt;Shift&gt; draws square, &lt;Ctrl&gt; draws from center</KEY>
+    <KEY NAME='Status:Framework:AnnotateText'>Click to position cursor, then type text</KEY>
+    <KEY NAME='Status:Framework:Pan'>Click &amp; drag or use arrows, &lt;Shift&gt; to constrain</KEY>
+    <KEY NAME='Status:Framework:ViewZoom'>Click &amp; drag to define zoom box, or use mouse wheel</KEY>
+    <KEY NAME='Status:Framework:CanvasZoomBox'>&lt;Shift&gt; to change zoom area to aspect ratio of window</KEY>
+
+  </LANGUAGE>
+
+</IDLffLangCat>

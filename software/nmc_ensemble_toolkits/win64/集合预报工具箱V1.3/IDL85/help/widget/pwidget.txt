@@ -1,0 +1,118 @@
+		PWIDGET - Basic Plotting Widget
+
+PWIDGET is a basic widget to produce simple plots.  It allows easy
+customization and annotation via a point-and-click interface.
+
+
+PWIDGET is called with the vectors to plot as parameters.  N
+observations of M variables are displayed with the call:
+
+	PWIDGET, x, y
+Where: 
+	x = an optional N element parameter, containing the X value of each
+		point. 
+	y = an (N, M) vector containing the ordinate values for each
+		point, for each variable.
+
+
+The parameter settings may be saved and restored in a structure via
+the SAVE and RESTORE keywords. 
+
+
+************************* Operation ***************************
+
+---------------Top row buttons:
+
+Done - exits PWIDGET.
+
+Reset/All - Resets the scaling, line settings and colors to their
+	original default values.
+Reset/Annotation -  Clears the annotation list which contains 
+	arrows, boxes, text, and legends.
+Reset/Redraw - Redraws the plot.
+Reset/Scaling - Restores the scaling to its original value.
+Help - Prints this text.
+Print - Makes a hard-copy of the plot on the selected output device.
+	The name of the output file for PostScript is idl.ps, for HPGL
+	it is idl.hp, for LJ-250 it is idl.lj, for PCL its idl.pcl,
+	and for CGM it is idl.cgm.  The file is not closed, so that
+	multiple plots are placed in one file.
+Hide Controls - Removes the controls from the screen and displays only
+	the plot.
+
+
+---------------Mode buttons:
+General - Displays the general main control panel.
+Title - 
+Sub-title - Enter the text for the main plot title and sub-title here.
+Nsum - The number of points to average for each plotted point.
+Tick Style - Selects the tick style of the plot.
+Bkgd - Selects the background color of the plot.  Click on the desired
+	color or shade.
+Char Size - Selects the size of the characters.  
+
+---------------Line Box:
+This control box selects the name, color, linestyle, thickness, marker
+symbol and marker size for each variable.  Press the variable's button
+to select the variable.  To change the name of the current variable,
+enter the new name, followed by a Carriage-Return  in the Name widget.
+Variable names are used when making legends.
+
+
+---------------Mouse Movement:
+Moving the mouse over the plot displays the coordinates in the lower
+left control.
+
+To zoom a region of the plot to fit the entire window, select a
+rectangular region by clicking the middle mouse button on one corner
+and dragging the mouse to the diagonally opposite corner.
+
+To pan the plot, drag the mouse with the left button down in the
+direction of the movement.
+
+
+---------------Axis Boxes:
+X Axis button - Displays the X axis control panel.
+Y Axis button - Displays the Y axis control panel.
+
+The type, style, title, range, and margins for each axis are
+manipulated by this control box.  In general, controls are self
+explanatory.  If the default values are not appropriate, enter the
+desired value into the respective text widget followed by a
+Carriage-Return. 
+
+
+
+---------------Annotation Box:
+This control box allows the addition of arrows, boxes, text, and
+legends to the plot.  Select the appropriate type of object by
+clicking its button.
+
+To draw:
+Arrow: select the arrow mode.  Then click where the tail of the arrow
+	should go, and drag the mouse with the button down to the end
+	of the head.
+Box:   select the box mode, and drag the mouse with the button down
+	from one diagonal corner of the box to the other.
+Text:  enter the text in the Text window.  Click on spot where the
+	text should go.
+Legend: draws a box containing the variable names, and their line
+	patterns.  Select one corner, and drag the mouse to the
+	diagonal opposite corner of the legend's box.
+
+
+Controls:
+Undo Button:  removes the last object.
+Coordinates/Data:  objects are located by data values.  Changing the
+	scaling will move the object with the data.
+Coordinates/Relative: objects are located at a specific point on the
+	screen.  Changes in scaling do not move the objects.
+Box Background: Selects between erasing the area underneath boxes, and 
+	leaving it unchanged.
+Text: Enter the text for the annotation here.
+
+The remaining controls affect the color, thickness, character size,
+and text alignment. 
+
+
+

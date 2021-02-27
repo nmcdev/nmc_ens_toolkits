@@ -1,0 +1,15 @@
+####################################################################
+#
+#    $Id: //depot/Release/ENVI53_IDL85/idl/idldir/resource/pref/idl.pref#1 $
+#
+#    This is the IDL distribution preference file. Preference
+# values defined in this file will apply to all users of this
+# installation of IDL.
+#
+# If your site has special site wide requirements, your system manager
+# can implement them by adding the appropriate definitions to this file.
+# This can be considerably easier than defining system wide environment
+# variables, or modifying every users shell initialization files.
+#
+####################################################################
+

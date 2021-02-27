@@ -1,0 +1,17 @@
+<!-- $Id: //depot/idl/IDL_63/idldir/resource/langcat/itools/langcat.dtd#1 $ -->
+<!ELEMENT IDLffLangCat (LANGUAGE*)>
+  <!ATTLIST IDLffLangCat
+    APPLICATION CDATA #IMPLIED
+    VERSION CDATA #IMPLIED
+    AUTHOR CDATA #IMPLIED
+    DATE CDATA #IMPLIED
+  >
+<!ELEMENT LANGUAGE (KEY*)>
+  <!ATTLIST LANGUAGE
+    NAME CDATA #REQUIRED
+  >
+<!ELEMENT KEY (#PCDATA)>
+  <!ATTLIST KEY
+    NAME CDATA #REQUIRED
+    TYPE CDATA #IMPLIED
+  >

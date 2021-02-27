@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE IDLffLangCat SYSTEM 'langcat.dtd'>
+
+<IDLffLangCat APPLICATION="license_wizard" VERSION="1.0" AUTHOR="RSI">
+
+  <LANGUAGE NAME='English'>
+
+    <KEY NAME='TITLE_LICENSEWIZARD'>License Wizard</KEY>
+    <KEY NAME='TITLE_LICENSEWIZARDHELP'>License Wizard Help</KEY>
+    
+    <KEY NAME='MAINOPTION_PREFACE'>Please select one of the following:</KEY>
+    <KEY NAME='MAINOPTION_REQUESTWEB'>Activate a license using the internet</KEY>
+    <KEY NAME='MAINOPTION_REQUESTOFFLINE'>Request a license if you don't have internet access</KEY>
+    <KEY NAME='MAINOPTION_ENTER'>Install a license you have received</KEY>
+    <KEY NAME='MAINOPTION_EXISTINGSERVER'>Learn how to connect to an existing license server</KEY>
+
+    <KEY NAME='MAINBUTTONS_BACK'>Back</KEY>
+    <KEY NAME='MAINBUTTONS_NEXT'>Next</KEY>
+    <KEY NAME='MAINBUTTONS_FINISH'>Finish</KEY>
+    <KEY NAME='MAINBUTTONS_HELP'>Help</KEY>
+    <KEY NAME='MAINBUTTONS_EXIT'>Exit</KEY>
+    <KEY NAME='MAINBUTTONS_CANCEL'>Cancel</KEY>
+
+    <KEY NAME='ENTER_ACTIVATED_PASTEHERE'>Paste license text here</KEY>
+    <KEY NAME='ENTER_INSTRUCTIONS_BROWSE'>Browse to import license file...</KEY>
+    <KEY NAME='LICENSEIMPORT_TITLE'>Select license file to import</KEY>
+    <KEY NAME='LICENSEIMPORT_INVALIDFILENAME'>Invalid filename, expect license.dat or *.lic: </KEY>
+
+    <KEY NAME='TEXT_OFFLINEREQUEST01'>Offline License Request</KEY>
+
+    <KEY NAME='TEXT_OFFLINEREQUEST02'>Option 1</KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST03'>   If you have web access on another computer at your site, save the text of the link</KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST04'>   below and transfer it to that computer. Paste the link into a web browser, log in</KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST05'>   to the licensing web site and follow the instructions.</KEY>
+
+    <KEY NAME='TEXT_OFFLINEREQUEST06'>Option 2</KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST07'>   If you do not have web access at your site, do the following to create an offline license request:</KEY>
+
+    <KEY NAME='TEXT_OFFLINEREQUEST08'>      Step 1): Specify the following information:</KEY>
+
+    <KEY NAME='TEXT_OFFLINEREQUEST09'>      First Name: </KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST10'>      Last Name: </KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST11'>      Email: </KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST12'>      Country: </KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST13'>      License number: </KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST14'>      Hostname: </KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST15'>      Host ID: </KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST16'>      Link: </KEY>
+
+    <KEY NAME='TEXT_OFFLINEREQUEST17'>      Step 2): Select "Save As" from the File menu, above. Save the file as "license_request.txt".</KEY>
+
+    <KEY NAME='TEXT_OFFLINEREQUEST18'>      Step 3): Email the "license_request.txt" file to support@exelisvis.com or print a copy of the file</KEY>
+    <KEY NAME='TEXT_OFFLINEREQUEST19'>               and call Exelis Visual Information Solutions at 303-413-3920 during business hours.</KEY>
+
+    <KEY NAME='ERROR_DEMO1'>The License Wizard is not available in timed demonstration mode.</KEY>
+    <KEY NAME='ERROR_DEMO2'>To run the License Wizard,</KEY>
+    <KEY NAME='ERROR_DEMO3_WIN'>Select "License Wizard" from the IDL/ENVI program group on the Windows Start menu.</KEY>
+    <KEY NAME='ERROR_DEMO3_MAC1'>Click on the License Wizard in the </KEY>
+    <KEY NAME='ERROR_DEMO3_MAC2'> folder.</KEY>
+    <KEY NAME='ERROR_DEMO3_UNIX1'>Run the License Wizard script in the </KEY>
+    <KEY NAME='ERROR_DEMO3_UNIX2'> directory.</KEY>
+    <KEY NAME='LICENSEDIR_NOTFOUND1'>The license directory does not exist. The expected location is:</KEY>
+    <KEY NAME='LICENSEDIR_NOTFOUND2'>The license wizard cannot continue.</KEY>
+    <KEY NAME='LICENSEDIR_NOWRITE1'>You do not have permission to write into the license directory:</KEY>
+    <KEY NAME='LICENSEDIR_NOWRITE2'>A license file cannot be saved until the permissions are changed.</KEY>
+    <KEY NAME='BITMAP_NOTFOUND1'>The following bitmap cannot be found:</KEY>
+    <KEY NAME='BITMAP_NOTFOUND2'>The license wizard cannot continue.</KEY>
+
+    <KEY NAME='SAVE_REPLACE1'>The file </KEY>
+    <KEY NAME='SAVE_REPLACE2'> already exists.</KEY>
+    <KEY NAME='SAVE_REPLACE3'>Do you want to replace it ?</KEY>
+    <KEY NAME='SAVE_NOWRITE1'>The file </KEY>
+    <KEY NAME='SAVE_NOWRITE2'> cannot be written.</KEY>
+    <KEY NAME='SAVE_NOWRITE3'>Make sure you have write permission for the file.</KEY>
+    <KEY NAME='SAVE_NOWRITE4'>Unable to save license data.</KEY>
+    <KEY NAME='SAVE_NOWRITE5'>Unable to install license manager.</KEY>
+    <KEY NAME='LICENSETEXT_NOREAD1'>The file </KEY>
+    <KEY NAME='LICENSETEXT_NOREAD2'> cannot be read.</KEY>
+
+    <KEY NAME='REQUESTWEB_CONNECTING'>Connecting to license web site...</KEY>
+    <KEY NAME='REQUESTWEB_CONNECTED'>Connected to license web site.</KEY>
+    <KEY NAME='REQUESTWEB_LOGIN'>In your browser, log in to retrieve your license.</KEY>
+    <KEY NAME='REQUESTWEB_WAITING'>Waiting for license...</KEY>
+
+    <KEY NAME='REQUESTWEB_LAUNCHBROWSER'>Launching browser...</KEY>
+    <KEY NAME='REQUESTWEB_COPYTEXT1'>Copy the text of the license and select "Next"</KEY>
+    <KEY NAME='REQUESTWEB_COPYTEXT2'>in the license wizard to enter the license.</KEY>
+
+
+    <KEY NAME='ENTER_FINISH1'>Your product has been successfully licensed.</KEY>
+    <KEY NAME='ENTER_FINISH2'>The license information has been saved in the file:</KEY>
+    <KEY NAME='ACTION_SERVERMATCH'>The server in the license file matches the current machine.</KEY>
+    <KEY NAME='ACTION_INSTALL_WIN'>Install license manager service</KEY>
+    <KEY NAME='ACTION_START_WIN'>Launch lmtools utility to manage service</KEY>
+    <KEY NAME='ACTION_INSTALL_UNIX'>Install license manager</KEY>
+    <KEY NAME='ACTION_START_UNIX'>Start license manager</KEY>
+
+    <KEY NAME='ACTION_REQUIRESHASP'>The license file contains license features that require a HASP.</KEY>
+    <KEY NAME='ACTION_INSTALLHASP'>Install HASP device driver</KEY>
+    <KEY NAME='ACTION_IMPORT'>Import license text</KEY>
+
+    <KEY NAME='ENTER_INVALID1'>The license information is invalid.</KEY>
+    <KEY NAME='ENTER_INVALID2'>Unable to save license data.</KEY>
+      
+  </LANGUAGE>
+  
+</IDLffLangCat>

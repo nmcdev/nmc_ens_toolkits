@@ -1,0 +1,47 @@
+# $Id: //depot/InDevelopment/integration/IDL_product/idl/idldir/resource/fonts/ps/font.map#1 $
+#
+# This file maps Adobe Font Metric (AFM) files to the PostScript font names
+# known internally to IDL. To add an AFM for a new font to IDL,
+# follow the instructions in the README.TXT file in this directory.
+#
+# If you intend to use this file under MS Windows on a FAT filesystem,
+# your file name should be fit within the 8.3 naming constraints of that
+# platform.
+#
+#    Fontname		   File name (no .afm ext.)      ISO encoding?
+#----------------------------------------------------------------------------
+AvantGarde-Book			AvGarBk				1
+AvantGarde-BookOblique		AvGarBkO			1
+AvantGarde-Demi			AvGarDe				1
+AvantGarde-DemiOblique		AvGarDeO			1
+Bookman-Demi			BookDe				1
+Bookman-DemiItalic		BookDeI				1
+Bookman-Light			BookLi				1
+Bookman-LightItalic		BookLiI				1
+Courier				Cour				1
+Courier-Bold			CourBo				1
+Courier-BoldOblique		CourBoO				1
+Courier-Oblique			CourO				1
+Helvetica			Hlv				1
+Helvetica-Bold			HlvBo				1
+Helvetica-BoldOblique		HlvBoO				1
+Helvetica-Narrow		HlvNa				1
+Helvetica-Narrow-Bold		HlvNaBo				1
+Helvetica-Narrow-BoldOblique	HlvNaBoO			1
+Helvetica-Narrow-Oblique	HlvNaO				1
+Helvetica-Oblique		HlvO				1
+NewCenturySchlbk-Bold		NCenBo				1
+NewCenturySchlbk-BoldItalic	NCenBoI				1
+NewCenturySchlbk-Italic		NCenI				1
+NewCenturySchlbk-Roman		NCenRo				1
+Palatino-Bold			PalBo				1
+Palatino-BoldItalic		PalBoI				1
+Palatino-Italic			PalI				1
+Palatino-Roman			PalRo				1
+Symbol				Symbol				0
+Times-Bold			TimesBo				1
+Times-BoldItalic		TimesBoI			1
+Times-Italic			TimesI				1
+Times-Roman			TimesRo				1
+ZapfChancery-MediumItalic	ZapChaMeI			1
+ZapfDingbats			ZapDing				0

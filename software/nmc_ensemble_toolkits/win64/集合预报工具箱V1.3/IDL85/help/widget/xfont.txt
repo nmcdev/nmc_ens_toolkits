@@ -1,0 +1,71 @@
+	XFONT - An IDL Widget for Font Selection
+
+This modal widget allows the selection and viewing of all
+the X Window fonts available on the X Window server.
+
+Fonts fall into two classes: Registered and Private.
+Registered fonts have been registered with the X Window
+consortium and their names follow a defined descriptive
+syntax.  Private fonts are server specific and their
+names do not follow the font name syntax.
+
+Registered fonts may be selected on the basis of:
+
+  Foundry - The name of the type foundry that
+	supplied the font.
+  Family - "family" of typeface design.
+  Weight - the nominal blackness of the font.  Typical
+	values are: bold, light, and normal.
+  Slant - R = roman for upright design.
+	  I = Italic
+	  O = Oblique
+  Width - the font's typographic proportionate width:
+	  Normal, Condensed, Narrow, or Double Wide.
+  Size - the font's point size expressed in decipoints.
+	For example, 120 designates a 12 point font.
+
+
+_________________________________________________________
+Controls are:
+
+OK - return with the selected font.
+
+Cancel - return with no font.
+
+View - creates a window that displays all 255 characters
+	of the selected font.  Clicking in this window
+	removes it.  Rows and columns are labelled with
+	their hexadecimal indices.
+
+Help - displays this text.
+
+Registered / Private - selects either the registered
+	font set or the private font set.
+
+DeciPoint Size text widget - (active only if scalable fonts
+	exist and a point size of 0 is selected.)  designates the
+	size of the font, in decipoints.  For example, enter 120
+	to obtain a 12 point font.
+
+Foundry button:
+Family button:
+Weight button:
+Slant button:
+Width button:
+Size button:	Pressing these buttons sets the respective
+	attribute's selection to '*' (all available) and displays
+	the available selections for that attribute in the list
+	widget to the right.  Clicking on the available attribute
+	item in the right-hand list widget selects that attribute.
+
+Center List Widget:  displays the available fonts
+	matching the selected attributes.  Clicking on a font
+	name selects that font.  If private fonts are selected,
+	all the private fonts are displayed in this list widget.
+
+Current font:  the name of the currently selected font.
+	If more than one font matches the selected attributes,
+	the first matching font is displayed.
+
+Display text:  The text that is displayed in the view
+	window below.  This text may be edited.

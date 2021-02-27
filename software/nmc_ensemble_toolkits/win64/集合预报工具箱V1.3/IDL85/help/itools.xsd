@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<!--
+$Id: //depot/Release/ENVI53_IDL85/idl/idldir/help/itools.xsd#1 $
+   Copyright (c) 2003-2015, Exelis Visual Information Solutions, Inc. All
+   rights reserved. Unauthorized reproduction is prohibited.
+-->
+
+<!--
+    xmlns is the default XMLSchema namespace.
+    targetNamespace is the namespace whose elements we are defining.
+    elementFormDefault="qualified" directs that any documents conforming
+        to this schema must be namespace qualified.
+-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.ittvis.com"
+    elementFormDefault="qualified">
+
+  <element name="Help">
+    <complexType>
+      <sequence>
+
+        <element name="Topic" minOccurs="0" maxOccurs="unbounded">
+          <complexType>
+            <sequence>
+
+              <element name="Keyword" type="string" minOccurs="1" maxOccurs="unbounded" />
+
+              <element name="Link" minOccurs="0" maxOccurs="unbounded">
+                <complexType>
+                  <simpleContent>
+                    <extension base="string">
+                      <attribute name="type" type="string" use="required" />
+                      <attribute name="book" type="string" />
+                    </extension>
+                  </simpleContent>
+                </complexType>
+              </element>
+
+            </sequence>
+          </complexType>
+        </element>
+
+      </sequence>
+    </complexType>
+  </element>
+
+</schema>
+

@@ -1,0 +1,256 @@
+                IDL Slicer
+
+The IDL Slicer displays slices and isosurfaces created from
+three-dimensional volume cubes.
+
+                Using the IDL Slicer
+
+Before calling the Slicer, you must define the common block
+VOLUME_DATA to include a variable that contains your 3D image
+dataset. The Slicer reads this common block to find the data
+to display.
+
+
+CONTROL BUTTONS
+
+The top of the Slicer's control panel has the following buttons:
+
+- Done
+  Exits the Slicer.
+
+- Erase
+  Removes all slices and draws an empty frame.
+
+- Undo
+  Removes the most recently object by swapping the current view
+  with the previous view.
+
+- Help
+  Displays this help file.
+
+- Orientation
+  Selects the orientation of the volume data with respect to the
+  display axes. This button displays a sub-menu containing the
+  following options:
+
+  - XY Exchange   Exchanges X and Y Axes
+  - XZ Exchange   Exchanges X and Z Axes
+  - YZ Exchange   Exchanges Y and Z Axes
+  - X  Reverse    Reverses the X Axis
+  - Y  Reverse    Reverses the Y Axis
+  - Z  Reverse    Reverses the Z Axis
+  - Reset         Reverts to the default orientation
+
+- Interpolation
+  Turning Interpolation On selections bilinear interpolation sampling,
+  turning it Off selects nearest neighbor sampling. Bilinear interpolation
+  is slower but yields more pleasing results.
+
+
+MODES
+
+The Slicer has the following modes:
+
+- Slices
+  Displays or removes orthogonal or oblique slices through the
+  data volume.
+
+- Block
+  Displaces the surfaces of a selected block inside the volume. 
+
+- Cutout
+  Cuts blocks from previously drawn objects.
+
+- Isosurface
+  Draws an isosurface contour.
+
+- Probe
+  Displays the position and value of objects using the mouse.
+
+- Colors
+  Manipulates the color tables and contrast.
+
+- Rotations
+  Sets the orientation of the display.
+
+- Journal
+  Records and plays back sessions.
+
+Select a mode by clicking on the appropriate button in the group
+of exclusive buttons near the top of the Slicer control panel.
+
+
+OPERATION OF EACH MODE
+
+The look of the Slicer control panel and the operation of the mouse
+buttons changes depending on the mode selected.
+
+- Slices Mode
+  This Slicer control panel displays a representation of the data
+  cube, showing the orientation and position of the selected slice.
+  A row of buttons below this representation allow you to choose
+  between "Draw" and "Expose" modes, and between Orthogonal and
+  Oblique slices.
+
+  - Draw mode displays the selected slice on the data cube, whether
+    or not any slices or surfaces are already displayed.
+  - Expose mode cuts the selected slice from a previously displayed
+    surface.
+  - Orthogonal slices are parallel to the faces of the data cube.
+  - Oblique slices are not parallel to the faces of the data cube.
+
+  Orthogonal slices are positioned within the data cube using the
+  mouse:
+
+  - Press and hold the left mouse button and drag the mouse cursor
+    perpendicular to the current slice orientation to position the
+    new slice. Releasing the mouse button draws the slice.
+  
+  - Click the middle mouse button within the data cube to display
+    the 3D location and data value of the selected point. This
+    information is displayed at the bottom of the Slicer control panel.
+ 
+  - Click the right mouse button within the data cube to change the
+    orientation of the slice plane.
+
+  Oblique slices are defined by selecting a point inside the data cube,
+  the angle between the X axis and the slice plane (the azimuth), and
+  the angle between the Z axis and the slice plane (the elevation).
+  When Oblique slices are selected, buttons allowing you to select
+  azimuth or elevation are displayed in the window with the data cube.
+
+  - To select the point, press and hold the left mouse button and drag
+    the mouse cursor along the three visible faces of the data cube.
+
+  - To select the azimuth, click on the "Azimuth" button at the top
+    of the window containing the data cube, then manipulate the angle
+    by pressing and holding the right mouse button while moving the
+    mouse cursor from left to right.
+
+  - To select the elevation, click on the "Elevation" button at the top
+    of the window containing the data cube, then manipulate the angle
+    by pressing and holding the right mouse button while moving the
+    mouse cursor from left to right.
+
+  Create the slice by setting the parameters and pressing the "Go"
+  button at the top of the window containing the data cube. The values
+  of the data parameters are displayed at the bottom of the Slicer
+  control panel.
+
+
+- Block Mode
+  This Slicer control panel displays a representation of the block
+  that will be selected, along with several buttons controlling action
+  in this mode:
+
+  - GO button
+    Draws the selected block.
+  - Cancel button
+    Removes the currently-defined block from the data cube.
+  - Cut Into button
+    Has no effect in this mode.
+  - Cut Over button
+    Has no effect in this mode.
+
+  The representation of the block shows corners marked "0" and "1".
+  Create the block to be drawn using the mouse:
+
+  - Press and hold the left mouse button to position corner 0. Note
+    that movement is constrained to the plane indicated by the colored
+    grid in the center of the block. Lines are drawn from the selected
+    corner to the three closest visible faces of the data cube.
+
+  - Press and hold the middle mouse button to position corner 1. Note
+    that movement is constrained to the plane indicated by the colored
+    grid in the center of the block. Lines are drawn from the selected
+    corner to the three closest visible faces of the data cube.
+
+  - Click the right mouse button within the data cube to change the
+    orientation of the plane.
+
+
+- Cutout Mode
+  This Slicer control panel is identical to Block Mode, and blocks are
+  selected in the same manner. In Cutout mode, selecting the "Cut Into"
+  button means that only cuts in to a previously drawn object (an
+  isosurface, for example) will be displayed. Selecting "Cut Over" means
+  that the entire back faces of the selected block will be displayed,
+  even if there is no object displayed in the data cube.
+
+
+- Isosurface Mode
+  This Slicer control panel displays a histogram of voxel data versus
+  population. Select the isosurface threshold either by adjusting the
+  slider or by clicking (with any mouse button) in the histogram window.
+  Two buttons allow you to choose whether the high or low side of the
+  isosurface is displayed. If the higher voxel values are inside the
+  isosurface, select the "Low Side" button, if the lower voxel values
+  are inside, select the "High Side" button. Click the "GO" button to
+  draw the isosurface.
+
+  WARNING: this may take a long time, depending upon the size of
+  the volume and the speed of your computer.
+
+
+- Probe Mode
+  Click with any mouse button over the displayed data. The 3D location
+  and data value are displayed at the bottom of the Slicer control panel.
+
+
+- Colors Mode
+  This Slider control panel displays a pulldown menu and three sliders:
+
+  - Color Tables menu
+    Click on the "Color Tables" button to display a menu of color
+    tables to apply. Click on a color table name to select that table.
+  - Contrast Minimum/Maximum sliders
+    Set these sliders to select the low and high data values that
+    are displayed at the extremes of the color table. Both values
+    are expressed as a percentage of the maximum voxel value. Increasing
+    the minimum value or decreasing the maximum value increases the
+    contrast.
+  - Differential Shading slider
+    Slices are differentially shaded to give and illusion of depth.
+    Set this slider to 100% to determine the shading exclusively by
+    the orientation of the slice. Set this slicer to 0% to determine
+    the shading exclusively by the data value.
+    
+
+- Rotations Mode
+  This Slicer control panel allows you to change the orientation of the
+  viewing cube. Note that changing the orientation erases any previously
+  drawn slices or surfaces.
+
+  - X Axis Rotation
+    Positive values rotate the top of the data cube toward the viewer.
+  - Z Axis Rotation
+    Positive values rotate the base of the cube counter-clockwise.
+  - Z Aspect Ratio
+    This ratio affects the height of the data cube in relation to the
+    size of the base. Values greater than 1 create a tall, narrow data
+    area, values less than one create a short, wide data area.
+
+
+- Journal Mode
+  This Slicer control panel allows you to record or play back files
+  containing Slicer commands.
+
+  To record a series of Slicer operations, specify a file to contain
+  the recorded commands. (Note that if the specified file already
+  exists, it will be overwritten.) Click "Start Recording," then
+  perform any series of Slicer operations. When you have finished,
+  click the "Stop Recording" button to close the journal file.
+
+  To play back a file of recorded slicer commands, specify the file
+  name and click "Playback."
+
+
+TRANSPARENCY
+
+The Transparency slider, located at the bottom of the Slicer control
+panel, sets a transparency threshold as a percentage of the maximum
+data value. If this slicer is set to either 0% or 100%, transparency
+is inactive. Voxel values less than the threshold value are not displayed
+if transparency is turned on.
+
+This slider has no effect when drawing isosurfaces.

@@ -1,0 +1,39 @@
+IDL Kernel README
+
+
+Files:
+    idl_kernel.py
+    IDL/kernel.json
+
+
+Uses:
+    Python wrappers for IPython Notebook/Jupyter.  Allows IDL code to be run in the notebooks
+
+
+Installation:
+    idl_kernel.py can be moved anywhere so long as it is on Python's path.
+    IDL/kernel.json should be placed in one of the following locations (including the IDL folder):
+
+    Unix System installation:
+        - /usr/share/jupyter/kernels
+        - /usr/local/share/jupyter/kernels
+
+    Windows System installation:
+        - %PROGRAMDATA%\jupyter\kernels
+
+    Per user installation:
+        - ~/.ipython/kernels
+
+Note:
+    IDL/kernel.json has an item under argv called python.  This string is directly executed by the system.
+    If python isn't on the path, the IDL kernel will not load.  Conversely, if IDL kernel ever needs a
+    specific version of python, specifying the full path in argv will allow the kernel to pick and choose which
+    python to use.
+
+System:
+    PYTHONPATH=C:\p4\dcilke_windows\IDL_Kraken\idl\idldir\lib\bridges;C:\Program Files\Exelis\IDL85\bin\bin.x86_64
+
+
+Additional Information:
+    https://ipython.org/ipython-doc/dev/development/kernels.html for more information.
+    http://ipython.org/ipython-doc/dev/notebook/nbformat.html

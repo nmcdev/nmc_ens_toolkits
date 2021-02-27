@@ -1,0 +1,93 @@
+		XLOADCT
+
+
+XLOADCT is a widget based utility for the interactive
+manipulation of color tables.  It may be used with any
+IDL Window application, regardless of whether or not
+the application uses widgets.
+
+The color table maps the data values written to the
+screen to different colors and intensities.  Its
+operation is similar to that of a photographic wedge.
+The slope and position of the wedge are manipulated to
+best display a particular dataset.
+
+The major controls are:
+
+Stretch Bottom and Stretch Top Sliders:
+
+  These sliders control the "contrast" of the color
+  tables, and are expressed in percentages of full intensity.
+  The color table wedge is "stretched" so that values equal
+  to or less than "Stretch Bottom" are set to the lowest
+  color table entry, which is usually black.  Values
+  equal to or greater than "Stretch Top" are set to the
+  last entry in the color table, usually white or some
+  other bright color.  Values between the bottom and top
+  are linearly scaled to the color table.
+  
+  Making "Stretch Bottom" more than "Stretch Top" inverts
+  the color table.
+
+Gamma Correction Slider:
+
+  This slider can be used to compensate for the
+  characteristics of your monitor. Values larger than 1.0
+  have a steeper contrast curve at the top end of the
+  ramp, while values less than 1.0 have a steeper
+  contrast curve at the bottom end of the ramp.  A value
+  of 1.0 results in a linear ramp.
+
+
+Pre-defined Color Table Buttons:
+
+  Pressing one of these buttons loads the selected
+  pre-defined color table.  The settings of the other
+  controls are not affected.
+
+Options:
+
+  Gang Sliders:  connects the "Stretch Bottom"
+    and "Stretch Top".  Moving one slider moves the other.
+    With the sliders ganged, movement of a slider
+    causes the other slider to track keeping the width of
+    the wedge constant, while moving it across the
+    range of data values.  Normally, the sliders are
+    independent.
+
+    The width of the wedge is fixed when this button is
+    depressed.
+
+ Top: When set to CLIP, values larger than the Top are
+    set to the largest color index.  If set to CHOP, values
+    larger than "Stretch Top" are set to color index 0.
+
+ Stretch: When set to the default of INDICES,
+    manipulations affect the mapping between color indices
+    and color table triples.  When set to INTENSITY, the
+    mapping controls the intensity of each color table entry.
+    This is a useful when displaying quantized images, where
+    the pixel value is arbitrary and does not represent an
+    intensity.  In this mode, the hue and saturation
+    remain relatively constant for a given color index.
+
+
+
+Transfer Function:
+
+  Selecting this mode allows interactive editing of the
+mapping of color table values to color indices by dragging
+control points on a plot of the map.  Select and move a
+control point by clicking and dragging on its box.  
+
+  The first and last control points may only be moved in the
+vertical direction.  Other control points may be moved
+anywhere within the plot as long as they are to the right of
+their predecessor and to the left of the next control point.
+
+  You can add a control point, in the largest interval that
+contains no control points with the "Add Control Point"
+button.  The "Remove Control Point" button removes the
+control central point in the smallest interval containing
+three control points.   The "Reset Transfer Function"
+restores a linear one-to-one transfer function.

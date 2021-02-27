@@ -1,0 +1,237 @@
+                    Annotation Widget
+
+The Annotation widget allows you to interactively annotate images and
+plots with text and drawings. Drawing objects include lines, arrows,
+polygons, rectangles, circles, and ellipses. Annotation files can be
+saved and restored, and annotated displays can be written to TIFF, PNG,
+or PostScript files. The Annotation widget will work on any IDL graphics
+window or draw widget.
+
+                    Using the Annotation Widget
+
+Before calling the Annotation widget, plot or display your data in an
+IDL graphics window or draw widget. Unless you specify otherwise (using
+the DRAWABLE or WINDOW keywords to ANNOTATE), annotations will be made
+in the current graphics window.
+
+
+MODES
+
+The Annotation widget has three modes of operation: Draw, Edit, and Select.
+
+- Draw Mode
+  Allows you to design and create new annotation objects.
+
+- Edit Mode
+  Allows you to move, resize, or otherwise change existing
+  annotation objects. In Edit Mode, "handles" appear on the
+  annotation object.
+
+- Select Mode
+  Allows you to choose an existing annotation object for editing.
+  Select an object by clicking the left mouse button in the center
+  of the object. When you release the mouse button, the object's
+  handles will appear and the Annotation widget will switch to
+  Edit Mode.
+
+Select a mode by clicking on the appropriate Mode Button. You can also
+switch between Draw Mode and Edit Mode by clicking the middle mouse button.
+
+
+SAVING OBJECTS
+
+Once you have created an annotation object, you must save it before
+going on to create another. Save objects either by clicking on the "Save"
+button or by clicking the right mouse button when the annotation object
+to be saved is selected. If the object is not saved and you switch from
+one type of object to another, the unsaved object will be removed from
+the annotation. When the object has been saved, the mode switches 
+automatically from "Edit" to "Draw".
+
+To change a saved object, choose Select Mode, select the object and edit
+it. Note that once an object is selected, it is removed from the "saved"
+list and thus must be saved again after modification.
+
+
+ANNOTATION OBJECTS
+
+The Annotation widget supports five types of annotation objects:
+Text, Lines and Arrows, Polygons and Polylines, Ellipses, and Rectangles.
+The different objects are represented by a row of bitmap buttons in
+the Annotation widget. To select a type of annotation, click on the
+appropriate button. The lower portion of the Annotation widget changes
+to present the controls available for that type of object.
+
+NOTE: If you switch from one type of object to another before saving
+an object, the unsaved object will be deleted.
+
+- Text 
+  To create a text annotation, enter the text in the field labelled
+  "Text", then click with the left mouse button in the image. Your
+  annotation text appears and the mode switches immediately to "Edit."
+  Resize or rotate the annotation text using the mouse by clicking
+  on one of the handles and dragging, or adjust the "Size" and 
+  "Orientation" sliders. Adjust the thickness of the text line strokes
+  using the "Thickness" slider.
+
+  Use the "Font" selection widget to select a font. Text can be aligned
+  to the left, right, or center by selecting the appropriate button.
+
+- Lines and Arrows
+  To create a line or arrow, click with the left mouse button and
+  drag the mouse until you have created the desired line. Click on the
+  "Arrow" button to create an arrow or on "Solid Arrow" to create an
+  arrow with a filled triangle as its head. Adjust the size of the 
+  arrowhead by moving the "Head Size" slider.
+  
+- Polygons and Polylines
+  The Polygon/Polyline tool has three sub-modes:
+
+  - Draw: (the initial mode). Drag or click the left mouse button
+    to add points to the object, connecting the most recent point to the
+    mouse position.
+  - Edit: Select and move a vertex or point by clicking and dragging
+    with the left mouse button.
+  - Delete: Remove the vertex or point closest to the cursor position
+    when the left mouse button is pressed.
+
+  Polygons can be unfilled, filled with a solid color, or filled with
+  parallel lines by selecting the appropriate button next to the "Fill"
+  label. If an object is filled with lines, the angle of the lines and
+  the spacing between them can be adjusted using the "Line Angle" and
+  "Line Spacing" sliders.
+
+  Choosing "Spline" next to the "Interpolation" label will produce
+  objects constructed of smooth curves rather than polygons.
+
+- Ellipses
+  To create an ellipse, click with the left mouse button at the point
+  you wish to be the center of the ellipse and drag until the
+  ellipse is the desired size. Adjust the eccentricity of the ellipse
+  using the "Eccentricity" slider.
+
+  Ellipses can be unfilled, filled with a solid color, or filled with
+  parallel lines by selecting the appropriate button next to the "Fill"
+  label. If an object is filled with lines, the angle of the lines and
+  the spacing between them can be adjusted using the "Line Angle" and
+  "Line Spacing" sliders.
+
+- Rectangles
+  To create a rectangle, click with the left mouse button at the point
+  you wish to be the upper left corner of the rectangle and drag until
+  the rectangle is the desired size.
+
+  Rectangles can be unfilled, filled with a solid color, or filled with
+  parallel lines by selecting the appropriate button next to the "Fill"
+  label. If an object is filled with lines, the angle of the lines and
+  the spacing between them can be adjusted using the "Line Angle" and
+  "Line Spacing" sliders.
+
+
+COLOR
+
+The color of any annotation object can be changed by selecting the
+object and picking a new color from the Annotation widget color bar.
+
+
+LINESTYLE
+
+You can adjust the thickness of lines and text using the "Thickness"
+slider. You can change the style of lines and shapes using the
+"Linestyle" selection widget. Note that fill lines are not affected
+by the choice of line style.
+
+
+CURSOR POSITION
+
+The current cursor position with the graphics window is shown (in
+pixel coordinates) in the window in the center of the Annotation
+widget.
+
+
+THE FILE MENU
+
+The File menu (at the upper left-hand corner of the Annotation widget)
+contains the following items:
+
+- Load
+  Load a saved annotation file into the current graphics window.
+  A file-selection dialog allows you to select a previously-saved
+  annotation file. When restoring objects, be sure that the window
+  you are loading into has the same geometry as did the window from
+  which the objects were saved.
+
+- Save
+  Save the current annotations in a file. If an annotation file has
+  not yet been opened or specified using the "Save As" menu option,
+  the file will be named "annotate.dat" and placed in the current
+  directory.  Note that only the annotations, and not the underlying
+  image or plot, are saved.
+
+- Save As
+  Save the current annotations in a file. A file-selection dialog
+  allows you to name the resulting file. Annotation files have the
+  suffix ".dat" by default. Note that only the annotations, and not
+  the underlying image or plot, are saved.
+
+- Write PostScript
+  Create a PostScript file of your annotations. This menu choice reveals
+  a submenu allowing you to choose "Everything" or "Objects only".
+
+  Choose "Everything" to output the contents of the graphics window
+  (your original plot or image) as a bitmap, and the annotation
+  objects as PostScript drawing commands. This creates a single file
+  and provides the best resolution.
+
+  Choose "Objects only" to save only the annotation objects. Use this
+  mode to combine the annotations with PostScript commands that have
+  already been output to obtain the highest resolution. To use this
+  procedure, take the following steps:
+
+  1) Open the PostScript device and create the plot over which you
+  wish your annotations to appear.  Be sure that it has the same aspect
+  ratio as does you drawing window.  For example, if you have a 640 x
+  512 drawing window, and you wish to make your PostScript drawing 4
+  inches wide, the PostScript height or YSIZE must be set to 4.0 * 512 /
+  640 = 3.2 inches, e.g. DEVICE, XSIZE=4, YSIZE=3.2, /INCHES.
+
+  2) Select the window system as your plot device, and re-execute the
+  commands that produced the background you wish to annotate.
+
+  3) Call ANNOTATE, make your annotations, and then use this option to
+  output the PostScript.  The PostScript device is not closed upon
+  completion, as it is with the other two PostScript output options.
+
+- Export Bitmap
+  Convert the entire contents of the graphics window (image and
+  annotations) to a bitmap and output in the format you choose.
+  The options available are PNG, PostScript, and TIFF.
+
+- Clear
+  Clear the graphics window of all annotations.
+
+- Exit
+  Exit the Annotation widget.
+
+OPTIONS BUTTON
+
+Click on the "Options" button to select various types of PostScript
+output:
+
+- Standalone or Encapsulated (to be inserted into another document).
+
+- Monochrome or Color, always use Monochrome unless you have a color
+  PostScript printer.
+
+- Portrait or Landscape.
+
+The width parameter scales the output size. The height of the output
+drawing is scaled from the width to retain the same aspect ratio as
+the original drawing window.
+
+
+CALLING THE ANNOTATION WIDGET
+
+For information on how to call the Annotation widget from your
+program, see ANNOTATE in the IDL Reference Guide or the IDL
+on-line help.
