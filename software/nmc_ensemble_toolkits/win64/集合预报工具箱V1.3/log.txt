@@ -1,4 +1,4 @@
-Starting: Sat Feb 27 01:50:30 2021
+Starting: Sun Feb 28 07:34:53 2021
 Using Save file: D:\DK_WORK_IDLCODE\dk_ens_repository\dk_ensemble_toolkits\source\nmc_enst_main_gui.sav
 Using manifest file: C:\Program Files\Exelis\IDL85\bin\make_rt\manifest_rt.txt
 Using IDL directory: C:\Program Files\Exelis\IDL85
@@ -514,5 +514,5 @@ Copied savefile
 Wrote Windows_ini
 Wrote windows launcher
 Finished writing launchers
-Finished: Sat Feb 27 01:50:34 2021
+Finished: Sun Feb 28 07:34:57 2021
 --------------------------------------  
